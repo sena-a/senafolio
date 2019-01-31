@@ -1,0 +1,26 @@
+{
+  "name": "senafolio",
+  "version": "1.0.0",
+  "description": "sena's portfolio site",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sena-a/senafolio.git"
+  },
+  "author": "serendipity",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sena-a/senafolio/issues"
+  },
+  "homepage": "https://github.com/sena-a/senafolio#readme",
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "node-sass": "^4.11.0",
+    "normalize.css": "^8.0.1",
+    "parcel-bundler": "^1.11.0"
+  }
+}
