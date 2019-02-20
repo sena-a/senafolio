@@ -21,6 +21,9 @@
     "animate.css": "^3.7.0",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
-    "parcel-bundler": "^1.11.0"
+    "parcel-bundler": "^1.11.0",
+    "reset-css": "^4.0.1",
+    "reset.css": "^2.0.2",
+    "utils": "^0.3.1"
   }
 }

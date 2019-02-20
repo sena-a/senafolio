@@ -1,0 +1,18 @@
+// 배경 색
+$main-bg: #ddd7ff;
+// $main-bg: #f4f0fb;
+$item-bg: #d5d1f0;
+$pic-bg: #f1effe;
+$progress-bg: rgb(199, 189, 255);
+// 중단점 변수
+$breakpoints: (
+  "small": (
+    min-width: 480px
+  ),
+  "medium": (
+    min-width: 768px
+  ),
+  "large": (
+    min-width: 1024px
+  )
+);
