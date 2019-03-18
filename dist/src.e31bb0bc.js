@@ -105,11 +105,19 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-// const introduceEl = document.querySelector(".introduce");
-// const titleEl = document.querySelector("#introduce--title");
-// titleEl.addEventListener("click", function() {
-//   introduceEl.classList.toggle("act");
-// });
+// 변수 선언
+var body = document.body; // header__arrow 클릭시 스크롤 이동
+
+var arrow = document.querySelector(".header__arrow");
+arrow.addEventListener("click", function () {
+  window.scroll(0, window.innerHeight);
+}); // 메뉴 클릭 시 책갈피
+// skills
+
+var skill = document.querySelector(".menu__skills");
+skill.addEventListener("click", function () {
+  document.getElementById("skills").scrollIntoView(true);
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -137,7 +145,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49337" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64171" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
