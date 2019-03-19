@@ -23,7 +23,7 @@
     height: 40px;
     border-radius: 50%;
     background: rgb(241, 241, 241);
-    background-image: linear-gradient(to right, transparent 50%, $title 0);
+    background-image: linear-gradient(to right, transparent 50%, $main 0);
     position: relative;
     display: inline-block;
   }
@@ -63,7 +63,7 @@
 
   @for $i from 51 through 100 {
     .pie[data-value="#{$i}"]:before {
-      background-color: $title;
+      background-color: $main;
       transform: rotate(#{$i/100 - 0.5}turn);
     }
   }

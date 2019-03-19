@@ -317,11 +317,11 @@ body {
 .menu {
   background: rgba(255, 255, 255, 0.7);
   text-align: center;
-  padding: 25px 0;
+  padding: 20px 0;
   font-size: 0.8rem;
   position: sticky;
   top: 0;
-  color: $title;
+  color: $main;
   z-index: 7;
   span {
     margin: 0 0.9rem;
@@ -331,20 +331,47 @@ body {
 // 스킬
 .main__skills {
   text-align: center;
-  padding: 60px 0;
+  padding: 90px 0;
   font-size: 0.8rem;
+  // color: $main;
+  color: $main;
   img {
     // display: inline-block;
     width: 35px;
     height: 35px;
   }
   &--title {
-    font-size: 0.9rem;
-    color: $title;
-    margin: 4px;
+    font-size: 1.5rem;
+    // color: $main;
+    margin: 3rem 0 3.5rem;
+    p {
+      font-size: 0.8rem;
+      margin: 1.5rem;
+    }
   }
   &--container {
-    @include progress;
+    display: flex;
+    justify-content: center;
+    font-size: 0.7rem;
+    .skill {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $main;
+      margin: 4px;
+      padding: 4px;
+      text-align: center;
+      line-height: 51px;
+      // font-weight: bold;
+      &-act {
+        // background: #a19bf0;
+        // border: 1px solid #a19bf0;
+        // background: #aaa0d1;
+        background: $main;
+        color: white;
+      }
+    }
+    // @include progress;
   }
 }
 img {
@@ -352,10 +379,10 @@ img {
 }
 // drag style
 ::selection {
-  background: $main-bg;
+  background: $item-bg;
 }
 ::-moz-selection {
-  background: $main-bg;
+  background: $item-bg;
 }
 
 // modal
