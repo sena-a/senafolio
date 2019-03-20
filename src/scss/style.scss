@@ -323,55 +323,93 @@ body {
   top: 0;
   color: $main;
   z-index: 7;
-  span {
+  span,
+  a {
     margin: 0 0.9rem;
   }
 }
 
-// 스킬
-.main__skills {
-  text-align: center;
-  padding: 90px 0;
-  font-size: 0.8rem;
-  // color: $main;
+// 메인
+.main {
   color: $main;
-  img {
-    // display: inline-block;
-    width: 35px;
-    height: 35px;
-  }
-  &--title {
-    font-size: 1.5rem;
-    // color: $main;
-    margin: 3rem 0 3.5rem;
-    p {
-      font-size: 0.8rem;
-      margin: 1.5rem;
+  // 스킬
+  &__skills {
+    padding: 90px 0;
+    font-size: 0.8rem;
+    text-align: center;
+    img {
+      width: 35px;
+      height: 35px;
     }
-  }
-  &--container {
-    display: flex;
-    justify-content: center;
-    font-size: 0.7rem;
-    .skill {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      border: 1px solid $main;
-      margin: 4px;
-      padding: 4px;
-      text-align: center;
-      line-height: 51px;
-      // font-weight: bold;
-      &-act {
-        // background: #a19bf0;
-        // border: 1px solid #a19bf0;
-        // background: #aaa0d1;
-        background: $main;
-        color: white;
+    &--title {
+      font-size: 1.5rem;
+      margin: 2.5rem 0;
+      p {
+        font-size: 0.8rem;
+        margin: 1.5rem;
       }
     }
-    // @include progress;
+    &--container {
+      display: flex;
+      justify-content: center;
+      font-size: 0.7rem;
+      .skill {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $main;
+        margin: 4px;
+        padding: 4px;
+        text-align: center;
+        line-height: 51px;
+        &-act {
+          background: $main;
+          color: white;
+        }
+      }
+      @include large-progress;
+    }
+    &--code {
+      width: 468px;
+      background: $code;
+      margin: 130px auto 0;
+      text-align: left;
+      border-radius: 7px;
+      code {
+        display: inline-block;
+        margin: 7px auto 0;
+        font-weight: bold;
+        color: black;
+        span {
+          display: inline-block;
+          margin: 5px 0;
+          font-family: "Source Code Pro", monospace;
+        }
+        .func {
+          color: rgb(177, 39, 62);
+        }
+        .dec {
+          color: rgb(110, 169, 187);
+        }
+        .var {
+          color: rgb(218, 80, 17);
+        }
+        .str {
+          color: rgb(114, 60, 241);
+        }
+        .method {
+          color: rgb(46, 168, 46);
+        }
+      }
+    }
+  }
+  &__project {
+    padding: 90px 0;
+    text-align: center;
+    > img {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
 img {

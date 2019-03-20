@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
   <head>
-    <title>Serendipity</title>
+    <title>Serendipia</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Playfair+Display&amp;subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Playfair+Display|Source+Code+Pro&amp;subset=korean" rel="stylesheet">
     <link href="/style.a6dae8f7.css" rel="stylesheet">
   <script src="/style.a6dae8f7.js"></script></head>
   <body>
@@ -29,10 +29,8 @@
       </header>
       <nav class="menu">
         <span class="menu__skills">SKILLS</span>
-        <span class="menu__project">PROJECT</span>
+        <a href="#project" class="menu__project">PROJECT</a>
         <span class="menu__about">ABOUT</span>
-        <!-- <a href="#">PROJECT</a>
-        <a href="#">ACTIVITY</a> -->
       </nav>
       <main class="main">
         <section id="skills" class="main__skills">
@@ -42,33 +40,33 @@
             <p>2018.09 ~ ing</p>
           </div>
           <div class="main__skills--container">
-            <div class="skill skill-act">
-              <div class="pie" data-value="90"></div>
+            <div id="html" class="skill">
               <p>HTML</p>
+              <div class="pie" data-value="90"></div>
             </div>
-            <div class="skill">
-              <div class="pie" data-value="80"></div>
+            <div id="css" class="skill">
               <p>CSS</p>
+              <div class="pie" data-value="80"></div>
             </div>
-            <div class="skill">
-              <div class="pie" data-value="40"></div>
+            <div id="sass" class="skill">
               <p>SASS</p>
+              <div class="pie" data-value="40"></div>
             </div>
-            <div class="skill">
-              <div class="pie" data-value="75"></div>
+            <div id="js" class="skill">
               <p>JS</p>
-            </div>
-            <div class="skill">
               <div class="pie" data-value="75"></div>
+            </div>
+            <div id="react" class="skill">
               <p>REACT</p>
+              <div class="pie" data-value="75"></div>
             </div>
-            <div class="skill">
-              <div class="pie" data-value="50"></div>
+            <div id="redux" class="skill">
               <p>REDUX</p>
+              <div class="pie" data-value="50"></div>
             </div>
-            <div class="skill">
+            <div id="other" class="skill skill-act">
               <!-- <div class="pie" data-value="50"></div> -->
-              <p>ETC</p>
+              <p>OTHER</p>
             </div>
             <!-- <div class="extra">+</div>
             <p>GIT</p>
@@ -79,14 +77,21 @@
           </div>
           <div class="main__skills--code">
             <pre>
-              <code class="html" data-lang="html">
-                <span class="nt">&lt;div</span>
+              <code class="language-javascript">
+<span>(</span><span class="func">function</span><span>(){</span>
+    <span class="dec">const</span> <span class="var">collaborations</span> <span class="dec">=</span> <span>[</span> <span class="str">"github"</span><span>,</span><span class="str">"slack"</span><span>,</span><span class="str">"trello"</span><span>];</span>
+    <span class="dec">const</span> <span class="var">languages</span> <span class="dec">=</span> <span>[</span> <span class="str">"english"</span><span>,</span><span class="str">"chinese"</span><span>,</span><span class="str">"japanese"</span><span>];</span>
+    <span class="func">function</span> <span>other(){</span>
+        <span>console.</span><span class="method">log</span><span>([</span><span class="var">collaborations</span><span>,</span><span class="var">languages</span><span>]);</span>
+    <span>}</span>
+    <span class="dec">return</span> <span>other();</span>
+<span>})();</span>
               </code>
             </pre>
           </div>
         </section>
-        <section class="main__project">
-          <div class="main__project--title">PROJECT</div>
+        <section id="project" class="main__project">
+          <img src="/project-purple.a40e900f.svg" alt="프로젝트 아이콘">
           <figure class="main__project--item">
             <img src="/cgv.f8877c4b.png" alt="cgv project">
             <figcaption>
