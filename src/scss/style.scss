@@ -334,9 +334,9 @@ body {
   color: $main;
   // 스킬
   &__skills {
-    padding: 90px 0;
     font-size: 0.8rem;
     text-align: center;
+    padding: 90px 0;
     img {
       width: 35px;
       height: 35px;
@@ -404,13 +404,56 @@ body {
     }
   }
   &__project {
-    padding: 90px 0;
+    background: $project;
+    width: 100%;
     text-align: center;
+    padding: 80px 0 0;
     > img {
+      // padding: 90px 0;
       width: 35px;
       height: 35px;
     }
+    &--container {
+      padding: 90px 0 120px;
+      img {
+        width: 20%;
+        margin: 15px;
+        // height: 80%;
+      }
+    }
+    // &--container {
+    //   margin: 0 auto;
+    //   display: grid;
+    //   width: 70vw;
+    //   height: 40vh;
+    //   min-width: 420px;
+    //   max-width: 620px;
+    //   min-height: 270px;
+    //   max-height: 470px;
+    //   grid-gap: 5px;
+    //   grid-template-columns: repeat(5, 1fr);
+    //   grid-template-rows: repeat(3, 1fr);
+    //   div {
+    //     background: $main;
+    //   }
+    //   .t-o {
+    //     grid-column: auto / span 2;
+    //     grid-row: auto / span 1;
+    //   }
+    //   .t-t {
+    //     grid-column: auto / span 2;
+    //     grid-row: auto / span 2;
+    //   }
+    //   .o-t {
+    //     grid-column: auto / span 1;
+    //     grid-row: auto / span 2;
+    //   }
+    // }
   }
+}
+
+.footer {
+  margin: 20vh;
 }
 img {
   width: 100%;
