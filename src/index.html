@@ -9,10 +9,11 @@
       href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Playfair+Display|Source+Code+Pro&amp;subset=korean"
       rel="stylesheet"
     />
+    <!-- <link href="./bootscss/bootstrap.scss" rel="stylesheet" /> -->
     <link href="./scss/style.scss" rel="stylesheet" />
   </head>
   <body>
-    <div class="container">
+    <div class="body-container">
       <header class="header">
         <div class="header__title">
           <p class="header__title--name animated fadeInDown">SENA</p>
@@ -99,49 +100,146 @@
           </div>
         </section>
         <section id="project" class="main__project">
-          <img src="../src/images/project.svg" alt="프로젝트 아이콘" />
+          <!-- <img src="../src/images/project-purple.svg" alt="프로젝트 아이콘" /> -->
           <div class="main__project--container">
             <div class="project-list">
-              <!-- <figure class="project-item">
-                <img src="../src/images/cgv.png" alt="cgv project" />
-                <figcaption>
-                  CGV CLONE PROJECT
-                </figcaption>
-              </figure>
-              <figure class="project-item">
-                <img src="../src/images/brickid.png" alt="cgv클론프로젝트" />
-                <figcaption>
-                  SHOPPING-MALL
-                </figcaption>
-              </figure>
-              <figure class="project-item">
-                <img src="../src/images/omok.png" alt="cgv클론프로젝트" />
-                <figcaption>
-                  OMOK GAME
-                </figcaption>
-              </figure> -->
+              <p class="active">CGV&nbsp;CLONE</p>
+              <p>BRICKID</p>
+              <p>OMOK</p>
             </div>
-            <!-- <div class="t-o"></div>
-            <div class="t-t"></div>
-            <div></div>
-            <div class="t-t"></div>
-            <div class="o-t"></div>
-            <div></div>
-            <div></div> -->
+            <div class="project-item">
+              <div
+                id="carouselExampleIndicators"
+                class="carousel slide"
+                data-ride="carousel"
+              >
+                <ol class="carousel-indicators">
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="1"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="2"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="3"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="4"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="5"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="6"
+                  ></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./images/cgv-main.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>
+                        Nulla vitae elit libero, a pharetra augue mollis
+                        interdum.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="./images/main-movie.png"
+                      alt="두번째 슬라이드"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="./images/moviechart.png"
+                      alt="세번째 슬라이드"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="./images/pagination.png"
+                      alt="세번째 슬라이드"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="./images/seat.png"
+                      alt="세번째 슬라이드"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="./images/mypage.png"
+                      alt="세번째 슬라이드"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="./images/cgv-zenhub.png"
+                      alt="세번째 슬라이드"
+                    />
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev"
+                  href="#carouselExampleIndicators"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">이전</span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#carouselExampleIndicators"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">다음</span>
+                </a>
+              </div>
+              <div class="used">
+                <span class="used-skill"># react</span>
+                <span class="used-skill"># Context API</span>
+                <span class="used-skill"># axios</span>
+                <span class="used-skill"># scss</span>
+                <span class="used-skill"># html5</span>
+                <span class="used-skill"># react-router</span>
+                <span class="used-skill"># react-helmet</span>
+                <span class="used-skill"># github</span>
+                <span class="used-skill"># zenhub</span>
+              </div>
+            </div>
           </div>
-
-          <!-- <figure class="main__project--item">
-            <img src="images/cgv.png" alt="cgv project" />
-            <figcaption>
-              CGV CLONE PROJECT
-            </figcaption>
-          </figure>
-          <figure class="main__project--item">
-            <img src="images/brickid.png" alt="shopping-mall project" />
-            <figcaption>
-              SHOPPING-MALL PROJECT
-            </figcaption>
-          </figure> -->
         </section>
       </main>
       <div class="modal">
@@ -158,14 +256,20 @@
       </footer>
     </div>
     <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
     ></script>
     <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="slick.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="./index.js"></script>
   </body>
 </html>
