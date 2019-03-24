@@ -416,11 +416,11 @@ body {
       height: 35px;
     }
     &--container {
-      padding: 90px 30px 100px;
+      padding: 130px 30px 70px;
       color: white;
       display: flex;
       justify-content: center;
-      transform: translateX(-55px);
+      transform: translateX(-60px);
       .project-list {
         text-align: right;
         margin-right: 20px;
@@ -436,20 +436,82 @@ body {
       }
       .project-item {
         margin: 6px;
-        display: flex;
-        .carousel {
-          width: 500px;
-        }
-        .used {
-          font-size: 0.7rem;
+        position: relative;
+        .item-figure {
           display: flex;
-          flex-direction: column;
-          span {
-            display: inline-block;
-            // border: 1px solid white;
-            padding: 0 8px;
-            margin: 0 3px 10px;
-            border-radius: 1rem;
+          .carousel {
+            width: 500px;
+          }
+          .used {
+            font-size: 0.7rem;
+            display: flex;
+            flex-direction: column;
+            margin: 0 11px;
+            span {
+              display: inline-block;
+              margin-bottom: 10px;
+              border-radius: 1rem;
+            }
+            .link {
+              a {
+                display: block;
+              }
+            }
+          }
+        }
+        .item-introduce {
+          .item-date {
+            font-size: 0.9rem;
+            position: absolute;
+            top: -62px;
+            left: 250px;
+            transform: translateX(-50%);
+            border: 1px solid $main;
+            padding: 11px;
+            border-radius: 3px;
+          }
+          .item-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            margin: 60px 0 30px;
+            width: 500px;
+            text-align: center;
+            &::before {
+              display: inline-block;
+              content: "";
+              width: 1.2rem;
+              height: 1.2rem;
+              background: url("../images/project-purple.svg") no-repeat;
+              background-size: contain;
+              transform: translateY(0.15rem);
+              margin-right: 5px;
+            }
+          }
+          .item-about {
+            font-family: "Nanum Gothic", sans-serif;
+            letter-spacing: -1px;
+            // width: 440px;
+            // border: 1px solid $main;
+            // border-radius: 3px;
+            // padding: 30px;
+            li {
+              margin: 10px 0;
+              img {
+                width: 1.2rem;
+                transform: translateY(0.2rem);
+              }
+            }
+            & > li::before {
+              display: inline-block;
+              content: "";
+              width: 1.2rem;
+              height: 1.2rem;
+              background: url("../images/check-purple.svg") no-repeat;
+              background-size: contain;
+              transform: translateY(0.15rem);
+              margin-right: 5px;
+            }
           }
         }
       }
