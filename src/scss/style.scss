@@ -416,7 +416,7 @@ body {
       height: 35px;
     }
     &--container {
-      padding: 130px 30px 70px;
+      padding: 130px 30px 80px;
       color: white;
       display: flex;
       justify-content: center;
@@ -451,11 +451,6 @@ body {
               display: inline-block;
               margin-bottom: 10px;
               border-radius: 1rem;
-            }
-            .link {
-              a {
-                display: block;
-              }
             }
           }
         }
@@ -497,20 +492,75 @@ body {
             // padding: 30px;
             li {
               margin: 10px 0;
-              img {
-                width: 1.2rem;
-                transform: translateY(0.2rem);
-              }
             }
-            & > li::before {
+            & > li::before,
+            ol::before {
               display: inline-block;
               content: "";
               width: 1.2rem;
               height: 1.2rem;
               background: url("../images/check-purple.svg") no-repeat;
               background-size: contain;
-              transform: translateY(0.15rem);
-              margin-right: 5px;
+              transform: translateY(0.25rem);
+            }
+            & > li::before {
+              margin-right: 10px;
+            }
+            ol::before {
+              margin-right: 8px;
+            }
+            ol {
+              li:nth-child(1) {
+                margin-top: 20px;
+              }
+              li {
+                margin-left: 60px;
+                position: relative;
+                &::before {
+                  display: inline-block;
+                  content: "";
+                  width: 7px;
+                  background: white;
+                  height: 1px;
+                  position: absolute;
+                  top: 50%;
+                  left: -15px;
+                }
+              }
+            }
+          }
+          .item-link {
+            width: 500px;
+            text-align: center;
+            margin: 50px 0;
+            a {
+              border: 1px solid $main;
+              padding: 8px 8px 9px;
+              margin: 0 3px;
+              border-radius: 3px;
+              &:hover {
+                background: $main;
+              }
+              &::before {
+                display: inline-block;
+                content: "";
+                width: 1rem;
+                height: 1rem;
+                transform: translateY(0.2rem);
+                margin-right: 4px;
+              }
+              &:nth-child(1)::before {
+                background: url("../images/web.svg") no-repeat;
+                background-size: contain;
+              }
+              &:nth-child(2)::before {
+                background: url("../images/github.svg") no-repeat;
+                background-size: contain;
+              }
+              &:nth-child(3)::before {
+                background: url("../images/video.svg") no-repeat;
+                background-size: contain;
+              }
             }
           }
         }
