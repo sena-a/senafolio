@@ -407,8 +407,8 @@ body {
   }
   &__project {
     width: 100%;
-    background: $project;
     font-size: 0.8rem;
+    padding-top: 52px;
     // height: 100vh;
     > img {
       padding: 120px 0 80px;
@@ -416,18 +416,24 @@ body {
       height: 35px;
     }
     &--container {
-      padding: 130px 30px 80px;
+      background: $main;
+      padding: 150px 0 100px;
+      width: 100%;
       color: white;
       display: flex;
       justify-content: center;
-      transform: translateX(-60px);
+      position: relative;
       .project-list {
+        position: absolute;
+        top: 150px;
+        left: calc(50% - 465px);
         text-align: right;
-        margin-right: 20px;
         width: 200px;
+        // transform: translateX(-50px);
         p {
           &.active {
-            background: $main;
+            background: white;
+            color: $main;
           }
           margin: 6px;
           padding: 11px;
@@ -437,33 +443,40 @@ body {
       .project-item {
         margin: 6px;
         position: relative;
+        // transform: translateX(-50px);
         .item-figure {
           display: flex;
           .carousel {
             width: 500px;
           }
           .used {
+            position: absolute;
+            left: 515px;
             font-size: 0.7rem;
-            display: flex;
-            flex-direction: column;
-            margin: 0 11px;
-            span {
-              display: inline-block;
+            width: 123px;
+            p {
               margin-bottom: 10px;
-              border-radius: 1rem;
+            }
+            .detail {
+              border: 1px solid #fff;
+              padding: 10px;
+              border-radius: 3px;
+              margin-bottom: 15px;
             }
           }
         }
         .item-introduce {
           .item-date {
-            font-size: 0.9rem;
-            position: absolute;
-            top: -62px;
-            left: 250px;
-            transform: translateX(-50%);
-            border: 1px solid $main;
-            padding: 11px;
+            font-size: 0.8rem;
+            // position: absolute;
+            // width: 110px;
+            margin: 0 auto;
+            text-align: center;
+            // top: -80px;
+            border: 1px solid white;
+            padding: 10px;
             border-radius: 3px;
+            margin-top: 60px;
           }
           .item-title {
             font-size: 1.2rem;
@@ -532,21 +545,22 @@ body {
           .item-link {
             width: 500px;
             text-align: center;
-            margin: 50px 0;
+            // margin: 50px 0;
+            font-size: 0.7rem;
+            position: absolute;
+            top: -60px;
+            padding: 11px;
             a {
-              border: 1px solid $main;
+              // border: 1px solid $main;
               padding: 8px 8px 9px;
               margin: 0 3px;
               border-radius: 3px;
-              &:hover {
-                background: $main;
-              }
               &::before {
                 display: inline-block;
                 content: "";
-                width: 1rem;
-                height: 1rem;
-                transform: translateY(0.2rem);
+                width: 0.8rem;
+                height: 0.8rem;
+                transform: translateY(0.15rem);
                 margin-right: 4px;
               }
               &:nth-child(1)::before {
@@ -560,6 +574,14 @@ body {
               &:nth-child(3)::before {
                 background: url("../images/video.svg") no-repeat;
                 background-size: contain;
+              }
+              &:hover {
+                background: white;
+                color: $main;
+                &:nth-child(1)::before {
+                  background: url("../images/skill.svg") no-repeat;
+                  background-size: contain;
+                }
               }
             }
           }

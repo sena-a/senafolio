@@ -1,0 +1,12 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+ <title/>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path fill="#685e92" id="bar_chart_graph_analysis" d="m28,25l0,-15a1,1 0 0 0 -1,-1l-4,0a1,1 0 0 0 -1,1l0,15l-2,0l0,-19a1,1 0 0 0 -1,-1l-4,0a1,1 0 0 0 -1,1l0,19l-2,0l0,-10a1,1 0 0 0 -1,-1l-4,0a1,1 0 0 0 -1,1l0,10l-2,0l0,-20l-2,0l0,21a1,1 0 0 0 1,1l27,0l0,-2l-2,0zm-4,-14l2,0l0,14l-2,0l0,-14zm-8,-4l2,0l0,18l-2,0l0,-18zm-8,9l2,0l0,9l-2,0l0,-9z"/>
+ </g>
+</svg>
