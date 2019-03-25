@@ -4524,14 +4524,14 @@ body {
             width: 160px; }
             .main__project--container .project-item .item-figure .used p {
               margin-bottom: 10px; }
-            .main__project--container .project-item .item-figure .used .detail {
+            .main__project--container .project-item .item-figure .used .modal-open {
               border: 1px solid #fff;
               padding: 4px 7px 10px;
               border-radius: 3px;
               margin-bottom: 15px;
               font-size: 0.8rem;
               cursor: pointer; }
-              .main__project--container .project-item .item-figure .used .detail::before {
+              .main__project--container .project-item .item-figure .used .modal-open::before {
                 display: inline-block;
                 content: "";
                 width: 1.2rem;

@@ -117,6 +117,16 @@ arrow.addEventListener("click", function () {
 var skill = document.querySelector(".menu__skills");
 skill.addEventListener("click", function () {
   document.getElementById("skills").scrollIntoView(true);
+}); // 프로젝트 모달 열기
+
+var open = document.querySelector(".modal-open");
+open.addEventListener("click", function () {
+  document.querySelector(".item-modal").classList.add("item-modal-active");
+}); // 프로젝트 모달 닫기
+
+var close = document.querySelector(".item-modal-close");
+close.addEventListener("click", function () {
+  document.querySelector(".item-modal").classList.remove("item-modal-active");
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
