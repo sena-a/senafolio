@@ -4293,7 +4293,7 @@ body {
   .main__skills {
     font-size: 0.8rem;
     text-align: center;
-    padding: 90px 0; }
+    padding: 80px 0; }
     .main__skills img {
       width: 35px;
       height: 35px; }
@@ -4484,14 +4484,14 @@ body {
   .main__project {
     width: 100%;
     font-size: 0.8rem;
-    padding-top: 52px; }
+    padding-top: 90px; }
     .main__project > img {
       padding: 120px 0 90px;
       width: 35px;
       height: 35px; }
     .main__project--container {
       background: #9a9fd9;
-      padding: 150px 0 110px;
+      padding: 85px 0 110px;
       width: 100%;
       color: white;
       display: flex;
@@ -4499,20 +4499,56 @@ body {
       position: relative; }
       .main__project--container .project-list {
         position: absolute;
-        top: 150px;
+        top: 134px;
         left: calc(50% - 465px);
         text-align: right;
         width: 200px; }
         .main__project--container .project-list p {
           margin: 6px;
-          padding: 11px;
-          border-radius: 3px; }
+          padding: 11px; }
           .main__project--container .project-list p.active {
             background: white;
             color: #9a9fd9; }
       .main__project--container .project-item {
         margin: 6px;
         position: relative; }
+        .main__project--container .project-item .item-link {
+          width: 500px;
+          text-align: center;
+          font-size: 0.7rem;
+          margin-bottom: 35px; }
+          .main__project--container .project-item .item-link a {
+            padding: 8px 8px 9px;
+            margin: 0 3px;
+            border-radius: 3px; }
+            .main__project--container .project-item .item-link a::before {
+              display: inline-block;
+              content: "";
+              width: 0.8rem;
+              height: 0.8rem;
+              transform: translateY(0.15rem);
+              margin-right: 4px; }
+            .main__project--container .project-item .item-link a:nth-child(1)::before {
+              background: url("web.70385504.svg") no-repeat;
+              background-size: contain; }
+            .main__project--container .project-item .item-link a:nth-child(2)::before {
+              background: url("github.737216c5.svg") no-repeat;
+              background-size: contain; }
+            .main__project--container .project-item .item-link a:nth-child(3)::before {
+              background: url("video.d0bd8cfa.svg") no-repeat;
+              background-size: contain; }
+            .main__project--container .project-item .item-link a:hover {
+              background: white;
+              color: #9a9fd9; }
+              .main__project--container .project-item .item-link a:hover:nth-child(1)::before {
+                background: url("web-hover.44235832.svg") no-repeat;
+                background-size: contain; }
+              .main__project--container .project-item .item-link a:hover:nth-child(2)::before {
+                background: url("github-hover.f7a16850.svg") no-repeat;
+                background-size: contain; }
+              .main__project--container .project-item .item-link a:hover:nth-child(3)::before {
+                background: url("video-hover.f9ffa77b.svg") no-repeat;
+                background-size: contain; }
         .main__project--container .project-item .item-figure {
           display: flex; }
           .main__project--container .project-item .item-figure .carousel {
@@ -4520,16 +4556,15 @@ body {
           .main__project--container .project-item .item-figure .used {
             position: absolute;
             left: 515px;
-            font-size: 0.7rem;
-            width: 160px; }
+            font-size: 0.8rem;
+            width: 120px; }
             .main__project--container .project-item .item-figure .used p {
-              margin-bottom: 10px; }
+              margin-bottom: 12px; }
             .main__project--container .project-item .item-figure .used .modal-open {
               border: 1px solid #fff;
-              padding: 4px 7px 10px;
-              border-radius: 3px;
+              padding: 3px 0 10px 7px;
+              margin-left: -2px;
               margin-bottom: 15px;
-              font-size: 0.8rem;
               cursor: pointer; }
               .main__project--container .project-item .item-figure .used .modal-open::before {
                 display: inline-block;
@@ -4538,8 +4573,14 @@ body {
                 height: 1.2rem;
                 background: url("click.fe3ac9c2.svg") no-repeat;
                 background-size: contain;
-                transform: translateY(0.15rem);
-                margin-right: 2px; }
+                transform: translateY(0.17rem);
+                margin-right: 3px; }
+              .main__project--container .project-item .item-figure .used .modal-open:hover {
+                background: white;
+                color: #9a9fd9; }
+                .main__project--container .project-item .item-figure .used .modal-open:hover::before {
+                  background: url("click-hover.71e43c60.svg") no-repeat;
+                  background-size: contain; }
         .main__project--container .project-item .item-introduce .item-date {
           font-size: 0.8rem;
           margin: 0 auto;
@@ -4569,8 +4610,7 @@ body {
           text-align: center;
           font-size: 0.7rem;
           position: absolute;
-          top: -60px;
-          padding: 11px; }
+          top: -60px; }
           .main__project--container .project-item .item-introduce .item-link a {
             padding: 8px 8px 9px;
             margin: 0 3px;
@@ -4794,7 +4834,7 @@ img {
 .carousel-indicators {
   position: absolute;
   right: 0;
-  bottom: -23px;
+  bottom: -20px;
   left: 0;
   z-index: 15;
   display: -webkit-box;

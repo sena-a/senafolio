@@ -338,7 +338,7 @@ body {
   &__skills {
     font-size: 0.8rem;
     text-align: center;
-    padding: 90px 0;
+    padding: 80px 0;
     img {
       width: 35px;
       height: 35px;
@@ -408,7 +408,8 @@ body {
   &__project {
     width: 100%;
     font-size: 0.8rem;
-    padding-top: 52px;
+    // padding-top: 52px;
+    padding-top: 90px;
     // height: 100vh;
     > img {
       padding: 120px 0 90px;
@@ -417,7 +418,7 @@ body {
     }
     &--container {
       background: $main;
-      padding: 150px 0 110px;
+      padding: 85px 0 110px;
       width: 100%;
       color: white;
       display: flex;
@@ -425,7 +426,7 @@ body {
       position: relative;
       .project-list {
         position: absolute;
-        top: 150px;
+        top: 134px;
         left: calc(50% - 465px);
         text-align: right;
         width: 200px;
@@ -437,13 +438,60 @@ body {
           }
           margin: 6px;
           padding: 11px;
-          border-radius: 3px;
         }
       }
       .project-item {
         margin: 6px;
         position: relative;
         // transform: translateX(-50px);
+        .item-link {
+          width: 500px;
+          text-align: center;
+          font-size: 0.7rem;
+          margin-bottom: 35px;
+          a {
+            // border: 1px solid $main;
+            padding: 8px 8px 9px;
+            margin: 0 3px;
+            border-radius: 3px;
+            &::before {
+              display: inline-block;
+              content: "";
+              width: 0.8rem;
+              height: 0.8rem;
+              transform: translateY(0.15rem);
+              margin-right: 4px;
+            }
+            &:nth-child(1)::before {
+              background: url("../images/web.svg") no-repeat;
+              background-size: contain;
+            }
+            &:nth-child(2)::before {
+              background: url("../images/github.svg") no-repeat;
+              background-size: contain;
+            }
+            &:nth-child(3)::before {
+              background: url("../images/video.svg") no-repeat;
+              background-size: contain;
+            }
+            &:hover {
+              background: white;
+              color: $main;
+              &:nth-child(1)::before {
+                background: url("../images/web-hover.svg") no-repeat;
+                background-size: contain;
+              }
+              &:nth-child(2)::before {
+                background: url("../images/github-hover.svg") no-repeat;
+                background-size: contain;
+              }
+              &:nth-child(3)::before {
+                background: url("../images/video-hover.svg") no-repeat;
+                background-size: contain;
+              }
+            }
+          }
+        }
         .item-figure {
           display: flex;
           .carousel {
@@ -452,17 +500,19 @@ body {
           .used {
             position: absolute;
             left: 515px;
-            font-size: 0.7rem;
-            width: 160px;
+            font-size: 0.8rem;
+            // width: 160px;
+            width: 120px;
             p {
-              margin-bottom: 10px;
+              margin-bottom: 12px;
             }
             .modal-open {
               border: 1px solid #fff;
-              padding: 4px 7px 10px;
-              border-radius: 3px;
+              // border-radius: 3px;
+              padding: 3px 0 10px 7px;
+              // margin: 20px 0;
+              margin-left: -2px;
               margin-bottom: 15px;
-              font-size: 0.8rem;
               cursor: pointer;
               &::before {
                 display: inline-block;
@@ -471,8 +521,16 @@ body {
                 height: 1.2rem;
                 background: url("../images/click.svg") no-repeat;
                 background-size: contain;
-                transform: translateY(0.15rem);
-                margin-right: 2px;
+                transform: translateY(0.17rem);
+                margin-right: 3px;
+              }
+              &:hover {
+                background: white;
+                color: $main;
+                &::before {
+                  background: url("../images/click-hover.svg") no-repeat;
+                  background-size: contain;
+                }
               }
             }
           }
@@ -511,11 +569,10 @@ body {
           .item-link {
             width: 500px;
             text-align: center;
-            // margin: 50px 0;
             font-size: 0.7rem;
             position: absolute;
             top: -60px;
-            padding: 11px;
+            // padding: 11px;
             a {
               // border: 1px solid $main;
               padding: 8px 8px 9px;
