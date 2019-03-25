@@ -4486,12 +4486,12 @@ body {
     font-size: 0.8rem;
     padding-top: 52px; }
     .main__project > img {
-      padding: 120px 0 80px;
+      padding: 120px 0 90px;
       width: 35px;
       height: 35px; }
     .main__project--container {
       background: #9a9fd9;
-      padding: 150px 0 100px;
+      padding: 150px 0 110px;
       width: 100%;
       color: white;
       display: flex;
@@ -4521,14 +4521,25 @@ body {
             position: absolute;
             left: 515px;
             font-size: 0.7rem;
-            width: 123px; }
+            width: 160px; }
             .main__project--container .project-item .item-figure .used p {
               margin-bottom: 10px; }
             .main__project--container .project-item .item-figure .used .detail {
               border: 1px solid #fff;
-              padding: 10px;
+              padding: 4px 7px 10px;
               border-radius: 3px;
-              margin-bottom: 15px; }
+              margin-bottom: 15px;
+              font-size: 0.8rem;
+              cursor: pointer; }
+              .main__project--container .project-item .item-figure .used .detail::before {
+                display: inline-block;
+                content: "";
+                width: 1.2rem;
+                height: 1.2rem;
+                background: url("click.fe3ac9c2.svg") no-repeat;
+                background-size: contain;
+                transform: translateY(0.15rem);
+                margin-right: 2px; }
         .main__project--container .project-item .item-introduce .item-date {
           font-size: 0.8rem;
           margin: 0 auto;
@@ -4553,38 +4564,6 @@ body {
             background-size: contain;
             transform: translateY(0.15rem);
             margin-right: 5px; }
-        .main__project--container .project-item .item-introduce .item-about {
-          font-family: "Nanum Gothic", sans-serif;
-          letter-spacing: -1px; }
-          .main__project--container .project-item .item-introduce .item-about li {
-            margin: 10px 0; }
-          .main__project--container .project-item .item-introduce .item-about > li::before,
-          .main__project--container .project-item .item-introduce .item-about ol::before {
-            display: inline-block;
-            content: "";
-            width: 1.2rem;
-            height: 1.2rem;
-            background: url("check-purple.d3de0d14.svg") no-repeat;
-            background-size: contain;
-            transform: translateY(0.25rem); }
-          .main__project--container .project-item .item-introduce .item-about > li::before {
-            margin-right: 10px; }
-          .main__project--container .project-item .item-introduce .item-about ol::before {
-            margin-right: 8px; }
-          .main__project--container .project-item .item-introduce .item-about ol li:nth-child(1) {
-            margin-top: 20px; }
-          .main__project--container .project-item .item-introduce .item-about ol li {
-            margin-left: 60px;
-            position: relative; }
-            .main__project--container .project-item .item-introduce .item-about ol li::before {
-              display: inline-block;
-              content: "";
-              width: 7px;
-              background: white;
-              height: 1px;
-              position: absolute;
-              top: 50%;
-              left: -15px; }
         .main__project--container .project-item .item-introduce .item-link {
           width: 500px;
           text-align: center;
@@ -4616,8 +4595,75 @@ body {
               background: white;
               color: #9a9fd9; }
               .main__project--container .project-item .item-introduce .item-link a:hover:nth-child(1)::before {
-                background: url("skill.4cf0c29d.svg") no-repeat;
+                background: url("web-hover.44235832.svg") no-repeat;
                 background-size: contain; }
+              .main__project--container .project-item .item-introduce .item-link a:hover:nth-child(2)::before {
+                background: url("github-hover.f7a16850.svg") no-repeat;
+                background-size: contain; }
+              .main__project--container .project-item .item-introduce .item-link a:hover:nth-child(3)::before {
+                background: url("video-hover.f9ffa77b.svg") no-repeat;
+                background-size: contain; }
+      .main__project--container .item-modal {
+        display: none; }
+        .main__project--container .item-modal-active {
+          display: block;
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.6);
+          z-index: 999;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        .main__project--container .item-modal-container {
+          background: #9a9fd9;
+          padding: 40px;
+          border: 2px solid white;
+          position: relative; }
+          .main__project--container .item-modal-container .item-date {
+            font-size: 1rem;
+            margin-bottom: 20px; }
+          .main__project--container .item-modal-container img {
+            position: absolute;
+            top: -4px;
+            right: -40px;
+            width: 35px;
+            height: 35px;
+            cursor: pointer; }
+          .main__project--container .item-modal-container .item-about {
+            font-family: "Nanum Gothic", sans-serif;
+            letter-spacing: -1px; }
+            .main__project--container .item-modal-container .item-about li {
+              margin: 10px 0; }
+            .main__project--container .item-modal-container .item-about > li::before,
+            .main__project--container .item-modal-container .item-about ol::before {
+              display: inline-block;
+              content: "";
+              width: 1.2rem;
+              height: 1.2rem;
+              background: url("check-purple.d3de0d14.svg") no-repeat;
+              background-size: contain;
+              transform: translateY(0.25rem); }
+            .main__project--container .item-modal-container .item-about > li::before {
+              margin-right: 10px; }
+            .main__project--container .item-modal-container .item-about ol::before {
+              margin-right: 8px; }
+            .main__project--container .item-modal-container .item-about ol li:nth-child(1) {
+              margin-top: 20px; }
+            .main__project--container .item-modal-container .item-about ol li {
+              margin-left: 60px;
+              position: relative; }
+              .main__project--container .item-modal-container .item-about ol li::before {
+                display: inline-block;
+                content: "";
+                width: 7px;
+                background: white;
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                left: -15px; }
 
 .footer {
   margin: 20vh; }

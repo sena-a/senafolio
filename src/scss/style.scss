@@ -411,13 +411,13 @@ body {
     padding-top: 52px;
     // height: 100vh;
     > img {
-      padding: 120px 0 80px;
+      padding: 120px 0 90px;
       width: 35px;
       height: 35px;
     }
     &--container {
       background: $main;
-      padding: 150px 0 100px;
+      padding: 150px 0 110px;
       width: 100%;
       color: white;
       display: flex;
@@ -453,15 +453,27 @@ body {
             position: absolute;
             left: 515px;
             font-size: 0.7rem;
-            width: 123px;
+            width: 160px;
             p {
               margin-bottom: 10px;
             }
             .detail {
               border: 1px solid #fff;
-              padding: 10px;
+              padding: 4px 7px 10px;
               border-radius: 3px;
               margin-bottom: 15px;
+              font-size: 0.8rem;
+              cursor: pointer;
+              &::before {
+                display: inline-block;
+                content: "";
+                width: 1.2rem;
+                height: 1.2rem;
+                background: url("../images/click.svg") no-repeat;
+                background-size: contain;
+                transform: translateY(0.15rem);
+                margin-right: 2px;
+              }
             }
           }
         }
@@ -495,6 +507,94 @@ body {
               transform: translateY(0.15rem);
               margin-right: 5px;
             }
+          }
+          .item-link {
+            width: 500px;
+            text-align: center;
+            // margin: 50px 0;
+            font-size: 0.7rem;
+            position: absolute;
+            top: -60px;
+            padding: 11px;
+            a {
+              // border: 1px solid $main;
+              padding: 8px 8px 9px;
+              margin: 0 3px;
+              border-radius: 3px;
+              &::before {
+                display: inline-block;
+                content: "";
+                width: 0.8rem;
+                height: 0.8rem;
+                transform: translateY(0.15rem);
+                margin-right: 4px;
+              }
+              &:nth-child(1)::before {
+                background: url("../images/web.svg") no-repeat;
+                background-size: contain;
+              }
+              &:nth-child(2)::before {
+                background: url("../images/github.svg") no-repeat;
+                background-size: contain;
+              }
+              &:nth-child(3)::before {
+                background: url("../images/video.svg") no-repeat;
+                background-size: contain;
+              }
+              &:hover {
+                background: white;
+                color: $main;
+                &:nth-child(1)::before {
+                  background: url("../images/web-hover.svg") no-repeat;
+                  background-size: contain;
+                }
+                &:nth-child(2)::before {
+                  background: url("../images/github-hover.svg") no-repeat;
+                  background-size: contain;
+                }
+                &:nth-child(3)::before {
+                  background: url("../images/video-hover.svg") no-repeat;
+                  background-size: contain;
+                }
+              }
+            }
+          }
+        }
+      }
+      .item-modal {
+        display: none;
+        &-active {
+          display: block;
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.6);
+          z-index: 999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        // color: black;
+        &-container {
+          background: $main;
+          padding: 40px;
+          border: 2px solid white;
+          position: relative;
+          .item- {
+            &date {
+              font-size: 1rem;
+              margin-bottom: 20px;
+            }
+          }
+          img {
+            position: absolute;
+            top: -4px;
+            right: -40px;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
           }
           .item-about {
             font-family: "Nanum Gothic", sans-serif;
@@ -538,49 +638,6 @@ body {
                   position: absolute;
                   top: 50%;
                   left: -15px;
-                }
-              }
-            }
-          }
-          .item-link {
-            width: 500px;
-            text-align: center;
-            // margin: 50px 0;
-            font-size: 0.7rem;
-            position: absolute;
-            top: -60px;
-            padding: 11px;
-            a {
-              // border: 1px solid $main;
-              padding: 8px 8px 9px;
-              margin: 0 3px;
-              border-radius: 3px;
-              &::before {
-                display: inline-block;
-                content: "";
-                width: 0.8rem;
-                height: 0.8rem;
-                transform: translateY(0.15rem);
-                margin-right: 4px;
-              }
-              &:nth-child(1)::before {
-                background: url("../images/web.svg") no-repeat;
-                background-size: contain;
-              }
-              &:nth-child(2)::before {
-                background: url("../images/github.svg") no-repeat;
-                background-size: contain;
-              }
-              &:nth-child(3)::before {
-                background: url("../images/video.svg") no-repeat;
-                background-size: contain;
-              }
-              &:hover {
-                background: white;
-                color: $main;
-                &:nth-child(1)::before {
-                  background: url("../images/skill.svg") no-repeat;
-                  background-size: contain;
                 }
               }
             }
