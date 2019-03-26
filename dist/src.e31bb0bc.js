@@ -377,7 +377,12 @@ node.append("text").text(function (d) {
     return "1.3rem";
   }
 });
-force.start();
+force.start(); // top 버튼
+
+var top = document.querySelector(".top");
+top.addEventListener("click", function () {
+  window.scrollTo(0, 0);
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

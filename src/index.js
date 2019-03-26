@@ -333,3 +333,11 @@ node
   });
 
 force.start();
+
+// top 버튼
+
+const top = document.querySelector(".top");
+
+top.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});

@@ -865,22 +865,32 @@ body {
     }
   }
 }
-
+.top {
+  position: relative;
+  cursor: pointer;
+  img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: -35px;
+  }
+}
 .footer {
   text-align: center;
   font-size: 0.7rem;
   padding: 15px;
   color: white;
-  background: $main; /* fallback for old browsers */
+  background: #c9d6ff; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #8ca6db,
-    #b993d6
+    #e2e2e2,
+    #c9d6ff
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #8ca6db,
-    #b993d6
+    #e2e2e2,
+    #c9d6ff
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 img {
