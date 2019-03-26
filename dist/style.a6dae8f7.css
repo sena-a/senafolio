@@ -4721,6 +4721,36 @@ body {
                 position: absolute;
                 top: 50%;
                 left: -15px; }
+  .main__about {
+    text-align: center;
+    padding: 90px 0;
+    position: relative; }
+    .main__about img {
+      width: 15px;
+      height: 15px; }
+    .main__about--title {
+      font-size: 1rem;
+      letter-spacing: 0;
+      margin-top: 10px;
+      padding: 7px; }
+    .main__about p:nth-child(2) {
+      font-size: 1.3rem;
+      margin: 30px 0 0; }
+    .main__about p:nth-child(3) {
+      display: inline-block;
+      font-size: 0.9rem;
+      background: white;
+      position: absolute;
+      left: calc(50% - 250px);
+      margin-top: -5px;
+      padding: 7px 11px;
+      border: 1px solid #7972a0; }
+    .main__about text {
+      transform: translateY(7px); }
+    .main__about .svg-container {
+      width: 550px;
+      height: 440px;
+      margin: 0 auto; }
 
 .footer {
   margin: 20vh; }

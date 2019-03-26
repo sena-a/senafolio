@@ -24,11 +24,11 @@ project.addEventListener("click", () => {
 });
 
 // about
-// const skill = document.querySelector(".menu__skills");
+const about = document.querySelector(".menu__about");
 
-// skill.addEventListener("click", () => {
-//   document.getElementById("skills").scrollIntoView(true);
-// });
+about.addEventListener("click", () => {
+  document.getElementById("about").scrollIntoView(true);
+});
 
 // 프로젝트 템플릿
 
@@ -143,3 +143,193 @@ close.addEventListener("click", () => {
   drawProject(frag);
   drawModal(modalFrag);
 })();
+
+// about 그래프
+// 출처: https://codepen.io/ames/pen/xZzREM?editors=0010
+
+var w = 1000,
+  h = 800,
+  circleWidth = 5;
+
+var palette = {
+  lightgray: "#E5E8E8",
+  gray: "#708284",
+  mediumgray: "#536870",
+  blue: "#3B757F"
+};
+
+var colors = d3.scale.category20();
+
+// var nodes = [
+//   { name: "SENA" },
+//   { name: "고양이", target: [0], value: 58 },
+//   { name: "세렌디피티", target: [0, 1], value: 65 },
+//   { name: "책", target: [0, 1, 2], value: 52 },
+//   { name: "영화", target: [0, 3], value: 48 },
+//   { name: "집사", target: [0, 3, 4, 5], value: 36 },
+//   { name: "보라색", target: [0, 1, 2], value: 52 },
+//   { name: "초코", target: [0, 1, 2, 8], value: 42 },
+//   { name: "밀크티", target: [0, 3, 4], value: 40 }
+// ];
+var nodes = [
+  { name: "SENA" },
+  { name: "고양이", target: [0], value: 70 },
+  { name: "세렌디피티", target: [0, 1], value: 65 },
+  { name: "보라색", target: [0, 1, 2], value: 52 },
+  { name: "초코", target: [0, 1, 2, 8], value: 35 },
+  { name: "밀크티", target: [0, 3, 4], value: 40 },
+  { name: "책", target: [0, 1, 2], value: 38 },
+  { name: "영화", target: [0, 3], value: 42 },
+  { name: "집사", target: [0, 3, 4, 5], value: 27 }
+];
+
+var links = [];
+
+for (var i = 0; i < nodes.length; i++) {
+  if (nodes[i].target !== undefined) {
+    for (var x = 0; x < nodes[i].target.length; x++)
+      links.push({
+        source: nodes[i],
+        target: nodes[nodes[i].target[x]]
+      });
+  }
+}
+
+var myChart = d3
+  .select("#about")
+  .append("div")
+  .classed("svg-container", true)
+
+  .append("svg")
+  .attr("preserveAspectRatio", "xMinYMin meet")
+  .attr("viewBox", "0 0 1000 800")
+  .classed("svg-content-responsive", true);
+
+var force = d3.layout
+  .force()
+  .nodes(nodes)
+  .links([])
+  .gravity(0.1)
+  .charge(-1000)
+  .size([w, h]);
+
+var link = myChart
+  .selectAll("line")
+  .data(links)
+  .enter()
+  .append("line")
+  .attr("stroke", palette.lightgray)
+  .attr("strokewidth", "1");
+
+var node = myChart
+  .selectAll("circle")
+  .data(nodes)
+  .enter()
+  .append("g")
+  .call(force.drag);
+
+node
+  .append("circle")
+  .attr("cx", function(d) {
+    return d.x;
+  })
+  .attr("cy", function(d) {
+    return d.y;
+  })
+  .attr("r", function(d, i) {
+    console.log(d.value);
+    if (i > 0) {
+      return circleWidth + d.value;
+    } else {
+      return circleWidth + 20;
+    }
+  })
+  .attr("fill", function(d, i) {
+    // if (i > 5) {
+    //   return "#9a9fd9";
+    // } else if (i > 3) {
+    //   return "#7972a0";
+    // } else if (i > 0) {
+    //   return "#d5d7fc";
+    // } else {
+    //   return "#fff";
+    // }
+    if (i > 5) {
+      return "#7875b6";
+    } else if (i > 3) {
+      return "#9198dd";
+    } else if (i > 0) {
+      return "#d5d7fc";
+    } else {
+      return "#fff";
+    }
+  });
+// .attr("strokewidth", function(d, i) {
+//   if (i > 0) {
+//     return "0";
+//   } else {
+//     return "1";
+//   }
+// })
+// .attr("stroke", function(d, i) {
+//   if (i > 0) {
+//     return "";
+//   } else {
+//     return "#7972a0";
+//   }
+// });
+
+force.on("tick", function(e) {
+  node.attr("transform", function(d, i) {
+    return "translate(" + d.x + "," + d.y + ")";
+  });
+
+  link
+    .attr("x1", function(d) {
+      return d.source.x;
+    })
+    .attr("y1", function(d) {
+      return d.source.y;
+    })
+    .attr("x2", function(d) {
+      return d.target.x;
+    })
+    .attr("y2", function(d) {
+      return d.target.y;
+    });
+});
+
+node
+  .append("text")
+  .text(function(d) {
+    return d.name;
+  })
+  .attr("font-family", function(d, i) {
+    if (i > 0) {
+      return "Nanum Gothic", "sans-serif";
+    } else {
+      return "Playfair Display", "serif";
+    }
+  })
+  .attr("fill", function(d, i) {
+    console.log(d.value);
+    if (i > 0 && d.value < 10) {
+      return "#fff";
+    } else if (i > 0 && d.value > 10) {
+      return "#fff";
+    } else {
+      return "#7972a0";
+    }
+  })
+  .attr("text-anchor", function(d, i) {
+    return "middle";
+  })
+  .attr("font-size", function(d, i) {
+    if (i > 0) {
+      return "1.3rem";
+    } else {
+      return "1.3rem";
+    }
+  });
+
+force.start();
