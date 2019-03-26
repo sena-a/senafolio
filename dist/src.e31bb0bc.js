@@ -226,52 +226,41 @@ var palette = {
   mediumgray: "#536870",
   blue: "#3B757F"
 };
-var colors = d3.scale.category20(); // var nodes = [
-//   { name: "SENA" },
-//   { name: "고양이", target: [0], value: 58 },
-//   { name: "세렌디피티", target: [0, 1], value: 65 },
-//   { name: "책", target: [0, 1, 2], value: 52 },
-//   { name: "영화", target: [0, 3], value: 48 },
-//   { name: "집사", target: [0, 3, 4, 5], value: 36 },
-//   { name: "보라색", target: [0, 1, 2], value: 52 },
-//   { name: "초코", target: [0, 1, 2, 8], value: 42 },
-//   { name: "밀크티", target: [0, 3, 4], value: 40 }
-// ];
-
+var colors = d3.scale.category20();
 var nodes = [{
   name: "SENA"
 }, {
   name: "고양이",
   target: [0],
-  value: 70
+  value: 73
 }, {
   name: "세렌디피티",
   target: [0, 1],
-  value: 65
+  value: 69
 }, {
   name: "보라색",
   target: [0, 1, 2],
-  value: 52
+  value: 33
 }, {
   name: "초코",
   target: [0, 1, 2, 8],
-  value: 35
+  value: 42
 }, {
   name: "밀크티",
   target: [0, 3, 4],
-  value: 40
+  value: 42
 }, {
   name: "책",
   target: [0, 1, 2],
   value: 38
 }, {
-  name: "영화",
+  name: "웃음",
   target: [0, 3],
-  value: 42
+  value: 54
 }, {
-  name: "집사",
+  name: "영화",
   target: [0, 3, 4, 5],
-  value: 27
+  value: 47
 }];
 var links = [];
 
