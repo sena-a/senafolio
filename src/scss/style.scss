@@ -737,33 +737,65 @@ body {
   }
   &__about {
     text-align: center;
-    padding: 90px 0;
+    padding: 90px 0 20px;
     position: relative;
     img {
       width: 15px;
       height: 15px;
     }
     &--title {
-      // width: 60px;
-      font-size: 1rem;
-      letter-spacing: 0;
-      margin-top: 10px;
-      // border: 1px solid $skill;
-      padding: 7px;
-    }
-    p:nth-child(2) {
       font-size: 1.3rem;
       margin: 30px 0 0;
     }
-    p:nth-child(3) {
+    p:nth-child(4) {
       display: inline-block;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       background: white;
-      position: absolute;
+      // position: absolute;
       left: calc(50% - 250px);
-      margin-top: -5px;
+      margin-top: 40px;
       padding: 7px 11px;
       border: 1px solid $skill;
+    }
+    .about-link {
+      text-align: center;
+      font-size: 0.7rem;
+      margin: 15px 0;
+      a {
+        display: inline-block;
+        // width: 70px;
+        padding: 6px 8px 9px;
+        margin: 0 3px;
+        // border-radius: 3px;
+        &::before {
+          display: inline-block;
+          content: "";
+          width: 0.9rem;
+          height: 0.9rem;
+          transform: translateY(0.2rem);
+          margin-right: 3px;
+        }
+        &:nth-child(1)::before {
+          background: url("../images/git.svg") no-repeat;
+          background-size: contain;
+        }
+        &:nth-child(2)::before {
+          background: url("../images/mail.svg") no-repeat;
+          background-size: contain;
+        }
+        &:hover {
+          background: $main;
+          color: white;
+          &:nth-child(1)::before {
+            background: url("../images/git-hover.svg") no-repeat;
+            background-size: contain;
+          }
+          &:nth-child(2)::before {
+            background: url("../images/mail-hover.svg") no-repeat;
+            background-size: contain;
+          }
+        }
+      }
     }
     text {
       transform: translateY(7px);
@@ -773,22 +805,95 @@ body {
       height: 440px;
       margin: 0 auto;
       // border: 1px solid $skill;
+      transform: translateY(-20px);
+    }
+  }
+  &__activity {
+    text-align: center;
+    & > p:nth-child(1) {
+      display: inline-block;
+      font-size: 0.8rem;
+      background: white;
+      // position: absolute;
+      left: calc(50% - 250px);
+      margin: 0 auto;
+      padding: 7px 11px;
+      border: 1px solid $skill;
+    }
+    &--container {
+      padding: 60px 0 170px;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 200px;
+        height: 130px;
+        -webkit-filter: grayscale(100%);
+        filter: gray;
+        margin: 0 10px;
+      }
+      .siotz {
+        font-size: 0.85rem;
+        text-align: left;
+        width: 220px;
+        p {
+          margin-bottom: 5px;
+          line-height: 1rem;
+        }
+        p:nth-child(1) {
+          font-size: 1rem;
+        }
+        p:nth-child(3) {
+          margin-top: 8px;
+          font-family: "Nanum Gothic", sans-serif;
+          letter-spacing: -1px;
+        }
+        &-link {
+          font-size: 0.7rem;
+          a {
+            display: inline-block;
+            margin: 10px 7px 0 0;
+            border: 1px solid $skill;
+            border-radius: 3px;
+            padding: 5px;
+            &:hover {
+              background: $skill;
+              color: white;
+            }
+          }
+        }
+      }
     }
   }
 }
 
 .footer {
-  margin: 20vh;
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 15px;
+  color: white;
+  background: $main; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #8ca6db,
+    #b993d6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #8ca6db,
+    #b993d6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 img {
   width: 100%;
 }
 // drag style
 ::selection {
-  background: $item-bg;
+  background: #cfcdf5;
+  color: white;
 }
 ::-moz-selection {
-  background: $item-bg;
+  background: #cfcdf5;
+  color: white;
 }
 
 // modal
