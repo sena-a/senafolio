@@ -16,6 +16,20 @@ skill.addEventListener("click", () => {
   document.getElementById("skills").scrollIntoView(true);
 });
 
+// project
+const project = document.querySelector(".menu__project");
+
+project.addEventListener("click", () => {
+  document.getElementById("project").scrollIntoView(true);
+});
+
+// about
+// const skill = document.querySelector(".menu__skills");
+
+// skill.addEventListener("click", () => {
+//   document.getElementById("skills").scrollIntoView(true);
+// });
+
 // 프로젝트 템플릿
 
 const templates = {
@@ -23,8 +37,8 @@ const templates = {
   brickid: document.getElementById("project-brickid").content,
   omok: document.getElementById("project-omok").content,
   modalCgv: document.getElementById("modal-cgv").content,
-  modalBrickid: document.getElementById("modal-brickid").content
-  // modalomok: document.getElementById("modal-omok").content
+  modalBrickid: document.getElementById("modal-brickid").content,
+  modalOmok: document.getElementById("modal-omok").content
 };
 
 const projectEl = document.querySelector(".project-item");
@@ -79,6 +93,27 @@ brickidButton.addEventListener("click", () => {
 
     const frag = document.importNode(templates.brickid, true);
     const modalFrag = document.importNode(templates.modalBrickid, true);
+
+    drawProject(frag);
+    drawModal(modalFrag);
+  }
+});
+
+// omok 클릭
+const omokButton = document.querySelector(".list-omok");
+
+omokButton.addEventListener("click", () => {
+  const cl = document.querySelector(".main__project--container").classList;
+  const now = cl[1];
+
+  if (now !== "omok") {
+    document
+      .querySelector(".main__project--container")
+      .classList.remove(`${now}`);
+    document.querySelector(".main__project--container").classList.add("omok");
+
+    const frag = document.importNode(templates.omok, true);
+    const modalFrag = document.importNode(templates.modalOmok, true);
 
     drawProject(frag);
     drawModal(modalFrag);

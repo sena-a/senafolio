@@ -117,15 +117,25 @@ arrow.addEventListener("click", function () {
 var skill = document.querySelector(".menu__skills");
 skill.addEventListener("click", function () {
   document.getElementById("skills").scrollIntoView(true);
-}); // 프로젝트 템플릿
+}); // project
+
+var project = document.querySelector(".menu__project");
+project.addEventListener("click", function () {
+  document.getElementById("project").scrollIntoView(true);
+}); // about
+// const skill = document.querySelector(".menu__skills");
+// skill.addEventListener("click", () => {
+//   document.getElementById("skills").scrollIntoView(true);
+// });
+// 프로젝트 템플릿
 
 var templates = {
   cgv: document.getElementById("project-cgv").content,
   brickid: document.getElementById("project-brickid").content,
   omok: document.getElementById("project-omok").content,
   modalCgv: document.getElementById("modal-cgv").content,
-  modalBrickid: document.getElementById("modal-brickid").content // modalomok: document.getElementById("modal-omok").content
-
+  modalBrickid: document.getElementById("modal-brickid").content,
+  modalOmok: document.getElementById("modal-omok").content
 };
 var projectEl = document.querySelector(".project-item");
 var modalEl = document.querySelector(".modal-content"); // projectEl에 프로젝트 아이템 삽입 함수
@@ -167,6 +177,21 @@ brickidButton.addEventListener("click", function () {
     document.querySelector(".main__project--container").classList.add("brickid");
     var frag = document.importNode(templates.brickid, true);
     var modalFrag = document.importNode(templates.modalBrickid, true);
+    drawProject(frag);
+    drawModal(modalFrag);
+  }
+}); // omok 클릭
+
+var omokButton = document.querySelector(".list-omok");
+omokButton.addEventListener("click", function () {
+  var cl = document.querySelector(".main__project--container").classList;
+  var now = cl[1];
+
+  if (now !== "omok") {
+    document.querySelector(".main__project--container").classList.remove("".concat(now));
+    document.querySelector(".main__project--container").classList.add("omok");
+    var frag = document.importNode(templates.omok, true);
+    var modalFrag = document.importNode(templates.modalOmok, true);
     drawProject(frag);
     drawModal(modalFrag);
   }
@@ -216,7 +241,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56681" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57157" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

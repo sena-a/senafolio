@@ -29,13 +29,12 @@
       </header>
       <nav class="menu">
         <span class="menu__skills">SKILLS</span>
-        <!-- <a href="#skills" class="menu__project">SKILLS</a> -->
-        <a href="#project" class="menu__project">PROJECT</a>
+        <span class="menu__project">PROJECT</span>
         <span class="menu__about">ABOUT</span>
       </nav>
       <main class="main">
         <section id="skills" class="main__skills">
-          <img src="/skill.4cf0c29d.svg" alt="스킬 아이콘">
+          <img src="/skill-purple.3ad9c54a.svg" alt="스킬 아이콘">
           <div class="main__skills--title">
             Love learning, learn fast
             <p>2018.09 ~ ing</p>
@@ -65,16 +64,10 @@
               <p>REDUX</p>
               <div class="pie" data-value="50"></div>
             </div>
-            <div id="other" class="skill skill-act">
-              <!-- <div class="pie" data-value="50"></div> -->
+            <div id="other" class="skill">
               <p>OTHER</p>
             </div>
-            <!-- <div class="extra">+</div>
-            <p>GIT</p>
-            <p>SLACK</p>
-            <p>ENGLISH</p>
-            <p>CHINESE</p>
-            <p>JAPANESE</p> -->
+
           </div>
           <div class="main__skills--code">
             <pre>
@@ -92,7 +85,6 @@
           </div>
         </section>
         <section id="project" class="main__project">
-          <!-- <img src="../src/images/project-purple.svg" alt="프로젝트 아이콘" /> -->
           <div class="main__project--container">
             <div class="project-list">
               <p class="list-cgv">MOVIE&nbsp;SITE</p>
@@ -191,9 +183,8 @@
               </template>
               <template id="project-brickid">
                   <div class="item-link">
-                      <a href="https://cgv.netlify.com/" target="_blank" title="윤호 그 이상의 열정, CGV">Web Site</a>
-                      <a href="https://github.com/U-Know-Yunho/Frontend" target="_blank" title="프로젝트 소스 코드">Github</a>
-                      <a href="https://www.youtube.com/watch?v=_k8WtPzqR3E" target="_blank" title="데모 영상">Demo Video</a>
+                      <a href="https://brickid.netlify.com/" target="_blank" title="Bricks for kidult">Web Site</a>
+                      <a href="https://github.com/sena-a/brickid" target="_blank" title="프로젝트 소스 코드">Github</a>
                     </div>
                     <div class="item-figure">
                       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -203,57 +194,47 @@
                           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                           <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li> 
                         </ol>
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img src="/brickid.d105543f.png" class="d-block w-100" alt="...">
+                            <img src="/brickid-main.dfaea87e.png" class="d-block w-100" alt="...">
                             <div class="carousel-caption">
                               <p>메인 페이지</p>
                             </div>
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="/main-movie.89a638a1.png" alt="두번째 슬라이드">
+                            <img class="d-block w-100" src="/product-list.b4563f73.png" alt="두번째 슬라이드">
                             <div class="carousel-caption">
-                              <p>메인 페이지 : 영화 차트 섹션</p>
-                              <p>- 현재 상영작 / 개봉 예정작의 상위 4편 노출</p>
-                              <p>- 더보기 : 선택 차트의 전체 차트 페이지로 이동</p>
+                              <p>카테고리별 상품 리스트 페이지</p>
                             </div>
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="/moviechart.310bf06c.png" alt="세번째 슬라이드">
+                            <img class="d-block w-100" src="/product-item.bd5951da.png" alt="세번째 슬라이드">
                             <div class="carousel-caption">
-                              <p>영화 차트 페이지</p>
-                              <p>- 예매율 순 정렬</p>
+                              <p>상품 상세 페이지</p>
+                              <p>- 갯수 선택 기능</p>
+                              <p>- 장바구니 넣기 / 바로 주문하기 기능</p>
                             </div>
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="/pagination.952a3aef.png" alt="세번째 슬라이드">
+                            <img class="d-block w-100" src="/cart.6b493076.png" alt="세번째 슬라이드">
                             <div class="carousel-caption">
-                              <p>영화 차트 페이지</p>
-                              <p>- 페이지네이션</p>
+                              <p>카트 페이지</p>
+                              <p>- 갯수 변경 기능</p>
+                              <p>- 카트에서 상품 삭제 기능</p>
                             </div>
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="/seat.580b167c.png" alt="세번째 슬라이드">
+                            <img class="d-block w-100" src="/ordered.f704d344.png" alt="세번째 슬라이드">
                             <div class="carousel-caption">
-                              <p>영화 예매 페이지 : 좌석&인원 선택 단계</p>
-                              <p>- 인원 미선택 시 진행 불가</p>
-                              <p>- 선택한 인원 수만큼만 좌석 선택 가능</p>
+                              <p>주문 내역 페이지</p>
                             </div>
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="/mypage.006e0f66.png" alt="세번째 슬라이드">
+                            <img class="d-block w-100" src="/login.871d7215.png" alt="세번째 슬라이드">
                             <div class="carousel-caption">
-                              <p>정보 수정 페이지</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img class="d-block w-100" src="/cgv-zenhub.d6686fee.png" alt="세번째 슬라이드">
-                            <div class="carousel-caption">
-                              <p>프로젝트 보드</p>
-                              <p>- github 기반의 zenhub 이용</p>
+                              <p>로그인 페이지</p>
                             </div>
                           </div>
                         </div>
@@ -267,55 +248,81 @@
                         </a>
                       </div>
                       <div class="used">
-                        <!-- <p class="brickid-modal-open">For the detail</p> -->
-                        <p>#&nbsp;react</p>
-                        <p>#&nbsp;Context&nbsp;API</p>
-                        <p>#&nbsp;react-router</p>
-                        <p>#&nbsp;react-helmet</p>
-                        <p>#&nbsp;axios</p>
+                        <p>#&nbsp;javascript</p>
                         <p>#&nbsp;scss</p>
                         <p>#&nbsp;html5</p>
+                        <p>#&nbsp;axios</p>
                         <p>#&nbsp;github</p>
-                        <p>#&nbsp;zenhub</p>
                       </div>
                     </div>
-                    <!-- <div class="item-modal">
-                      <div class="item-modal-container">
-                        <p class="item-date">18.12.03 ~ 18.12.21</p>
-                        <ul class="item-about">
-                          <li>CGV 사이트를 모델로 구현한 영화 예매 사이트</li>
-                          <li>TEAM - 프론트엔드 2명, 백엔드 2명</li>
-                          <li>프론트엔드 기여도 - 50%</li>
-                          <ol>
-                            Responsible for
-                            <li>메인 페이지의 영화 차트 섹션</li>
-                            <li>영화 차트 페이지</li>
-                            <li>예매 페이지의 좌석&인원 선택 기능</li>
-                            <li>정보 수정 페이지</li>
-                            <li>
-                              관람한 예매내역과 관람 예정인 예매 내역을 상태로
-                              저장하는 MyMovieContext 구현
-                            </li>
-                          </ol>
-                        </ul>
-                        <img
-                          class="item-modal-close"
-                          src="./images/close.svg"
-                          alt="닫기 버튼"
-                        />
-                      </div>
-                    </div>             -->
                   </template>
               <template id="project-omok">
-                <div>BRICKID</div>
-              </template>
+                  <div class="item-link">
+                      <a href="https://team-guobaorou-sena.netlify.com/" target="_blank" title="팀 해커톤 오목">Web Site</a>
+                      <a href="https://github.com/sena-a/team-hackathon" target="_blank" title="프로젝트 소스 코드">Github</a>
+                    </div>
+                    <div class="item-figure">
+                      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="/omok-main.1ee1bbed.png" class="d-block w-100" alt="첫번째 슬라이드">
+                            <div class="carousel-caption">
+                              <p>메인 페이지</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="/omok-nick.1609acb6.png" alt="두번째 슬라이드">
+                            <div class="carousel-caption">
+                              <p>메인페이지: 닉네임 입력</p>
+                              <p>- 기본 닉네임으로 플레이 가능</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="/game-ing.c60af43b.png" alt="세번째 슬라이드">
+                            <div class="carousel-caption">
+                              <p>게임 실행 중 페이지</p>
+                              <p>- 기존 오목 게임 로직</p>
+                              <p>- 해당 턴 플레이어 이름 색깔 처리</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="/winner.7ce64f4b.png" alt="네번째 슬라이드">
+                            <div class="carousel-caption">
+                              <p>게임 종료 페이지</p>
+                              <p>- 승자 닉네임 표기</p>
+                              <p>- 승자 색깔에 따라 border 색깔 구별</p>
+                            </div>
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">이전</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">다음</span>
+                        </a>
+                      </div>
+                      <div class="used">
+                        <p>#&nbsp;javascript</p>
+                        <p>#&nbsp;css</p>
+                        <p>#&nbsp;html5</p>
+                        <p>#&nbsp;github</p>
+                      </div>
+                    </div>              </template>
             <div class="project-item"></div>
             <p class="modal-open">For the detail</p>
             <div class="item-modal">
                 <div class="item-modal-container">
                   <div class="modal-content"></div>
                   <template id="modal-cgv">
-                    <p class="item-date">18.12.03 ~ 18.12.21</p>
+                    <p class="item-date">18.12.03 ~ 18.12.21 (3weeks)</p>
                     <ul class="item-about">
                       <li>CGV 사이트를 모델로 구현한 영화 예매 사이트</li>
                       <li>TEAM - 프론트엔드 2명, 백엔드 2명</li>
@@ -334,21 +341,31 @@
                     </ul>
                   </template>
                   <template id="modal-brickid">
-                    <p class="item-date">???</p>
+                    <p class="item-date">18.11.7 ~ 18.11.9 (3days)</p>
                     <ul class="item-about">
-                      <li>CGV 사이트를 모델로 구현한 영화 예매 사이트</li>
-                      <li>TEAM - 프론트엔드 2명, 백엔드 2명</li>
-                      <li>프론트엔드 기여도 - 50%</li>
+                      <li>쇼핑몰 사이트</li>
+                      <li>Personal project</li>
+                      <li>기여도 - 100%</li>
                       <ol>
-                        Responsible for
-                        <li>메인 페이지의 영화 차트 섹션</li>
-                        <li>영화 차트 페이지</li>
-                        <li>예매 페이지의 좌석&인원 선택 기능</li>
-                        <li>정보 수정 페이지</li>
-                        <li>
-                          관람한 예매내역과 관람 예정인 예매 내역을 상태로
-                          저장하는 MyMovieContext 구현
-                        </li>
+                        Description
+                        <li>template 태그를 이용한 바닐라 자바스크립트 프로젝트</li>
+                        <li>JSON Live Server를 이용해 서버 대체</li>
+                        <li>axios를 통해 데이터 통신</li>
+                      </ol>
+                    </ul>
+                  </template>
+                  <template id="modal-omok">
+                    <p class="item-date">18.10.25 ~ 18.10.26 (2days)</p>
+                    <ul class="item-about">
+                      <li>오목 게임 로직을 기반으로 한 오목 게임 플레이 사이트</li>
+                      <li>TEAM - 프론트엔드 3명</li>
+                      <li>기여도 - 33%</li>
+                      <ol>
+                        Description
+                        <li>전반적인 디자인 컨셉과 페이지 레이아웃, MVP 선정 등의 기획단계에서부터 실제 기능 구현까지 페어 프로그래밍으로 진행</li>
+                        <li>시작 시 사용자가 원하는 닉네임 입력 가능. 입력하지 않을 시, 기본 닉네임으로 지정</li>
+                        <li>게임 중 reset 버튼 클릭 시 해당 바둑판만 초기화</li>
+                        <li>게임 종료 시 창의 restart 버튼 클릭 시 게임 완전 초기화</li>                        
                       </ol>
                     </ul>
                   </template>

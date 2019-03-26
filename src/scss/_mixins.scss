@@ -71,162 +71,115 @@
   }
 }
 
+// large-progress mixin에서 쓰이는 after & before
+@mixin large-after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 1px;
+  background: $skill;
+}
+
+@mixin large-before {
+  display: block;
+  position: absolute;
+  left: 19px;
+  width: 20px;
+  height: 20px;
+  color: $skill;
+}
 @mixin large-progress {
   #html {
     position: relative;
     &::after {
-      display: block;
-      content: "";
-      position: absolute;
+      @include large-after;
       bottom: -90px;
       left: 28.5px;
-      width: 1px;
       height: 90px;
-      background: $main;
     }
     &::before {
-      display: block;
+      @include large-before;
       content: "90%";
-      position: absolute;
       bottom: -95px;
-      left: 19px;
-      width: 20px;
-      height: 20px;
-      color: $main;
-      font-size: 0.8rem;
     }
   }
   #css {
     position: relative;
     &::after {
-      display: block;
-      content: "";
-      position: absolute;
+      @include large-after;
       bottom: -80px;
       left: 28.5px;
-      width: 1px;
       height: 80px;
-      background: $main;
     }
     &::before {
-      display: block;
+      @include large-before;
       content: "80%";
-      position: absolute;
       bottom: -85px;
-      left: 19px;
-      width: 20px;
-      height: 20px;
-      color: $main;
-      font-size: 0.8rem;
     }
   }
   #sass {
     position: relative;
     &::after {
-      display: block;
-      content: "";
-      position: absolute;
+      @include large-after;
       bottom: -40px;
       left: 28.5px;
-      width: 1px;
       height: 40px;
-      background: $main;
     }
     &::before {
-      display: block;
+      @include large-before;
       content: "40%";
-      position: absolute;
       bottom: -45px;
-      left: 19px;
-      width: 20px;
-      height: 20px;
-      color: $main;
-      font-size: 0.8rem;
     }
   }
   #js {
     position: relative;
     &::after {
-      display: block;
-      content: "";
-      position: absolute;
+      @include large-after;
       bottom: -75px;
       left: 28.5px;
-      width: 1px;
       height: 75px;
-      background: $main;
     }
     &::before {
-      display: block;
+      @include large-before;
       content: "75%";
-      position: absolute;
       bottom: -80px;
-      left: 19px;
-      width: 20px;
-      height: 20px;
-      color: $main;
-      font-size: 0.8rem;
     }
   }
   #react {
     position: relative;
     &::after {
-      display: block;
-      content: "";
-      position: absolute;
+      @include large-after;
       bottom: -75px;
       left: 28.5px;
-      width: 1px;
       height: 75px;
-      background: $main;
     }
     &::before {
-      display: block;
+      @include large-before;
       content: "75%";
-      position: absolute;
       bottom: -80px;
-      left: 19px;
-      width: 20px;
-      height: 20px;
-      color: $main;
-      font-size: 0.8rem;
     }
   }
   #redux {
     position: relative;
     &::after {
-      display: block;
-      content: "";
-      position: absolute;
+      @include large-after;
       bottom: -50px;
       left: 28.5px;
-      width: 1px;
       height: 50px;
-      background: $main;
     }
     &::before {
-      display: block;
+      @include large-before;
       content: "50%";
-      position: absolute;
       bottom: -55px;
-      left: 19px;
-      width: 20px;
-      height: 20px;
-      color: $main;
-      font-size: 0.8rem;
     }
   }
   #other {
     position: relative;
     &::after {
-      display: block;
-      content: "";
-      position: absolute;
+      @include large-after;
       bottom: -130px;
       left: 28.5px;
-      width: 1px;
       height: 130px;
-      background: $main;
     }
   }
 }

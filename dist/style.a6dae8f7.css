@@ -4241,7 +4241,7 @@ body {
   height: 100vh;
   width: 100%;
   position: relative;
-  background: #b993d6;
+  background: #9a9fd9;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #8ca6db, #b993d6);
   /* Chrome 10-25, Safari 5.1-6 */
@@ -4282,14 +4282,15 @@ body {
   font-size: 0.8rem;
   position: sticky;
   top: 0;
-  color: #9a9fd9;
-  z-index: 7; }
+  color: #7972a0;
+  z-index: 7;
+  cursor: pointer; }
   .menu span,
   .menu a {
     margin: 0 0.9rem; }
 
 .main {
-  color: #9a9fd9; }
+  color: #7972a0; }
   .main__skills {
     font-size: 0.8rem;
     text-align: center;
@@ -4306,156 +4307,149 @@ body {
     .main__skills--container {
       display: flex;
       justify-content: center;
-      font-size: 0.7rem; }
+      font-size: 0.8rem; }
       .main__skills--container .skill {
         display: inline-block;
         width: 50px;
         height: 50px;
-        border: 1px solid #9a9fd9;
+        border: 1px solid #7972a0;
         margin: 4px;
         padding: 4px;
         text-align: center;
         line-height: 51px; }
-        .main__skills--container .skill-act {
-          background: #9a9fd9;
-          color: white; }
+        .main__skills--container .skill p {
+          font-size: 0.7rem; }
       .main__skills--container #html {
         position: relative; }
         .main__skills--container #html::after {
           display: block;
           content: "";
           position: absolute;
+          width: 1px;
+          background: #7972a0;
           bottom: -90px;
           left: 28.5px;
-          width: 1px;
-          height: 90px;
-          background: #9a9fd9; }
+          height: 90px; }
         .main__skills--container #html::before {
           display: block;
-          content: "90%";
           position: absolute;
-          bottom: -95px;
           left: 19px;
           width: 20px;
           height: 20px;
-          color: #9a9fd9;
-          font-size: 0.8rem; }
+          color: #7972a0;
+          content: "90%";
+          bottom: -95px; }
       .main__skills--container #css {
         position: relative; }
         .main__skills--container #css::after {
           display: block;
           content: "";
           position: absolute;
+          width: 1px;
+          background: #7972a0;
           bottom: -80px;
           left: 28.5px;
-          width: 1px;
-          height: 80px;
-          background: #9a9fd9; }
+          height: 80px; }
         .main__skills--container #css::before {
           display: block;
-          content: "80%";
           position: absolute;
-          bottom: -85px;
           left: 19px;
           width: 20px;
           height: 20px;
-          color: #9a9fd9;
-          font-size: 0.8rem; }
+          color: #7972a0;
+          content: "80%";
+          bottom: -85px; }
       .main__skills--container #sass {
         position: relative; }
         .main__skills--container #sass::after {
           display: block;
           content: "";
           position: absolute;
+          width: 1px;
+          background: #7972a0;
           bottom: -40px;
           left: 28.5px;
-          width: 1px;
-          height: 40px;
-          background: #9a9fd9; }
+          height: 40px; }
         .main__skills--container #sass::before {
           display: block;
-          content: "40%";
           position: absolute;
-          bottom: -45px;
           left: 19px;
           width: 20px;
           height: 20px;
-          color: #9a9fd9;
-          font-size: 0.8rem; }
+          color: #7972a0;
+          content: "40%";
+          bottom: -45px; }
       .main__skills--container #js {
         position: relative; }
         .main__skills--container #js::after {
           display: block;
           content: "";
           position: absolute;
+          width: 1px;
+          background: #7972a0;
           bottom: -75px;
           left: 28.5px;
-          width: 1px;
-          height: 75px;
-          background: #9a9fd9; }
+          height: 75px; }
         .main__skills--container #js::before {
           display: block;
-          content: "75%";
           position: absolute;
-          bottom: -80px;
           left: 19px;
           width: 20px;
           height: 20px;
-          color: #9a9fd9;
-          font-size: 0.8rem; }
+          color: #7972a0;
+          content: "75%";
+          bottom: -80px; }
       .main__skills--container #react {
         position: relative; }
         .main__skills--container #react::after {
           display: block;
           content: "";
           position: absolute;
+          width: 1px;
+          background: #7972a0;
           bottom: -75px;
           left: 28.5px;
-          width: 1px;
-          height: 75px;
-          background: #9a9fd9; }
+          height: 75px; }
         .main__skills--container #react::before {
           display: block;
-          content: "75%";
           position: absolute;
-          bottom: -80px;
           left: 19px;
           width: 20px;
           height: 20px;
-          color: #9a9fd9;
-          font-size: 0.8rem; }
+          color: #7972a0;
+          content: "75%";
+          bottom: -80px; }
       .main__skills--container #redux {
         position: relative; }
         .main__skills--container #redux::after {
           display: block;
           content: "";
           position: absolute;
+          width: 1px;
+          background: #7972a0;
           bottom: -50px;
           left: 28.5px;
-          width: 1px;
-          height: 50px;
-          background: #9a9fd9; }
+          height: 50px; }
         .main__skills--container #redux::before {
           display: block;
-          content: "50%";
           position: absolute;
-          bottom: -55px;
           left: 19px;
           width: 20px;
           height: 20px;
-          color: #9a9fd9;
-          font-size: 0.8rem; }
+          color: #7972a0;
+          content: "50%";
+          bottom: -55px; }
       .main__skills--container #other {
         position: relative; }
         .main__skills--container #other::after {
           display: block;
           content: "";
           position: absolute;
+          width: 1px;
+          background: #7972a0;
           bottom: -130px;
           left: 28.5px;
-          width: 1px;
-          height: 130px;
-          background: #9a9fd9; }
+          height: 130px; }
     .main__skills--code {
       width: 468px;
       background: #f0eff5;
@@ -4505,6 +4499,7 @@ body {
       background: #9a9fd9;
       padding: 85px 0 110px;
       width: 100%;
+      height: 375px;
       color: white;
       display: flex;
       justify-content: center;
@@ -4514,10 +4509,15 @@ body {
         top: 134px;
         left: calc(50% - 465px);
         text-align: right;
-        width: 200px; }
+        width: 200px;
+        cursor: pointer; }
         .main__project--container .project-list p {
           margin: 6px;
           padding: 11px; }
+          .main__project--container .project-list p:hover {
+            background: white;
+            border-radius: 3px;
+            color: #9a9fd9; }
           .main__project--container .project-list p.active {
             background: white;
             border-radius: 3px;
