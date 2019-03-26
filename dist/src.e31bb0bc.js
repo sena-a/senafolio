@@ -117,12 +117,51 @@ arrow.addEventListener("click", function () {
 var skill = document.querySelector(".menu__skills");
 skill.addEventListener("click", function () {
   document.getElementById("skills").scrollIntoView(true);
-}); // 프로젝트 모달 열기
+}); // 프로젝트 템플릿
+
+var templates = {
+  cgv: document.getElementById("project-cgv").content,
+  brickid: document.getElementById("project-brickid").content,
+  omok: document.getElementById("project-omok").content,
+  modalCgv: document.getElementById("modal-cgv").content,
+  modalBrickid: document.getElementById("modal-brickid").content,
+  modalomok: document.getElementById("modal-omok").content
+};
+var projectEl = document.querySelector(".project-item");
+var modalEl = document.querySelector(".modal-content"); // projectEl에 프로젝트 아이템 삽입 함수
+
+function drawProject(frag) {
+  projectEl.textContent = "";
+  projectEl.appendChild(frag);
+} // modalEl에 프로젝트 모달 템플릿 삽입 함수
+
+
+function drawModal(frag) {
+  modalEl.textContent = "";
+  modalEl.appendChild(frag);
+} // movie-site 클릭
+
+
+var cgvButton = document.querySelector(".list-cgv");
+cgvButton.addEventListener("click", function () {
+  var frag = document.importNode(templates.cgv, true);
+  var modalFrag = document.importNode(templates.modalCgv, true);
+  drawProject(frag);
+  drawModal(modalFrag);
+}); // brickid 클릭
+
+var brickidButton = document.querySelector(".list-brickid");
+brickidButton.addEventListener("click", function () {
+  var frag = document.importNode(templates.brickid, true);
+  var modalFrag = document.importNode(templates.modalBrickid, true);
+  drawProject(frag);
+  drawModal(modalFrag);
+}); // 모달 열기 버튼
 
 var open = document.querySelector(".modal-open");
 open.addEventListener("click", function () {
   document.querySelector(".item-modal").classList.add("item-modal-active");
-}); // 프로젝트 모달 닫기
+}); // 모달 닫기 버튼
 
 var close = document.querySelector(".item-modal-close");
 close.addEventListener("click", function () {
@@ -155,7 +194,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65410" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56681" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
