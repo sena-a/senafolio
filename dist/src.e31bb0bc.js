@@ -124,13 +124,13 @@ var templates = {
   brickid: document.getElementById("project-brickid").content,
   omok: document.getElementById("project-omok").content,
   modalCgv: document.getElementById("modal-cgv").content,
-  modalBrickid: document.getElementById("modal-brickid").content,
-  modalomok: document.getElementById("modal-omok").content
+  modalBrickid: document.getElementById("modal-brickid").content // modalomok: document.getElementById("modal-omok").content
+
 };
 var projectEl = document.querySelector(".project-item");
 var modalEl = document.querySelector(".modal-content"); // projectEl에 프로젝트 아이템 삽입 함수
 
-function drawProject(frag) {
+function drawProject(frag, project) {
   projectEl.textContent = "";
   projectEl.appendChild(frag);
 } // modalEl에 프로젝트 모달 템플릿 삽입 함수
@@ -144,18 +144,32 @@ function drawModal(frag) {
 
 var cgvButton = document.querySelector(".list-cgv");
 cgvButton.addEventListener("click", function () {
-  var frag = document.importNode(templates.cgv, true);
-  var modalFrag = document.importNode(templates.modalCgv, true);
-  drawProject(frag);
-  drawModal(modalFrag);
+  var cl = document.querySelector(".main__project--container").classList;
+  var now = cl[1];
+
+  if (now !== "cgv") {
+    document.querySelector(".main__project--container").classList.remove("".concat(now));
+    document.querySelector(".main__project--container").classList.add("cgv");
+    var frag = document.importNode(templates.cgv, true);
+    var modalFrag = document.importNode(templates.modalCgv, true);
+    drawProject(frag, "cgv");
+    drawModal(modalFrag);
+  }
 }); // brickid 클릭
 
 var brickidButton = document.querySelector(".list-brickid");
 brickidButton.addEventListener("click", function () {
-  var frag = document.importNode(templates.brickid, true);
-  var modalFrag = document.importNode(templates.modalBrickid, true);
-  drawProject(frag);
-  drawModal(modalFrag);
+  var cl = document.querySelector(".main__project--container").classList;
+  var now = cl[1];
+
+  if (now !== "brickid") {
+    document.querySelector(".main__project--container").classList.remove("".concat(now));
+    document.querySelector(".main__project--container").classList.add("brickid");
+    var frag = document.importNode(templates.brickid, true);
+    var modalFrag = document.importNode(templates.modalBrickid, true);
+    drawProject(frag);
+    drawModal(modalFrag);
+  }
 }); // 모달 열기 버튼
 
 var open = document.querySelector(".modal-open");
@@ -166,7 +180,15 @@ open.addEventListener("click", function () {
 var close = document.querySelector(".item-modal-close");
 close.addEventListener("click", function () {
   document.querySelector(".item-modal").classList.remove("item-modal-active");
-});
+}); // 기본 project로 move-site 넣어주기
+
+(function () {
+  document.querySelector(".main__project--container").classList.add("cgv");
+  var frag = document.importNode(templates.cgv, true);
+  var modalFrag = document.importNode(templates.modalCgv, true);
+  drawProject(frag);
+  drawModal(modalFrag);
+})();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

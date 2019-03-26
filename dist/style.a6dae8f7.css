@@ -4489,6 +4489,18 @@ body {
       padding: 120px 0 90px;
       width: 35px;
       height: 35px; }
+    .main__project .cgv .list-cgv {
+      background: white;
+      border-radius: 3px;
+      color: #9a9fd9; }
+    .main__project .brickid .list-brickid {
+      background: white;
+      border-radius: 3px;
+      color: #9a9fd9; }
+    .main__project .omok .list-omok {
+      background: white;
+      border-radius: 3px;
+      color: #9a9fd9; }
     .main__project--container {
       background: #9a9fd9;
       padding: 85px 0 110px;

@@ -416,6 +416,27 @@ body {
       width: 35px;
       height: 35px;
     }
+    .cgv {
+      .list-cgv {
+        background: white;
+        border-radius: 3px;
+        color: $main;
+      }
+    }
+    .brickid {
+      .list-brickid {
+        background: white;
+        border-radius: 3px;
+        color: $main;
+      }
+    }
+    .omok {
+      .list-omok {
+        background: white;
+        border-radius: 3px;
+        color: $main;
+      }
+    }
     &--container {
       background: $main;
       // background: #b993d6; /* fallback for old browsers */

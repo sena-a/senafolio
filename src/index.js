@@ -23,15 +23,15 @@ const templates = {
   brickid: document.getElementById("project-brickid").content,
   omok: document.getElementById("project-omok").content,
   modalCgv: document.getElementById("modal-cgv").content,
-  modalBrickid: document.getElementById("modal-brickid").content,
-  modalomok: document.getElementById("modal-omok").content
+  modalBrickid: document.getElementById("modal-brickid").content
+  // modalomok: document.getElementById("modal-omok").content
 };
 
 const projectEl = document.querySelector(".project-item");
 const modalEl = document.querySelector(".modal-content");
 
 // projectEl에 프로젝트 아이템 삽입 함수
-function drawProject(frag) {
+function drawProject(frag, project) {
   projectEl.textContent = "";
   projectEl.appendChild(frag);
 }
@@ -46,21 +46,43 @@ function drawModal(frag) {
 const cgvButton = document.querySelector(".list-cgv");
 
 cgvButton.addEventListener("click", () => {
-  const frag = document.importNode(templates.cgv, true);
-  const modalFrag = document.importNode(templates.modalCgv, true);
-  drawProject(frag);
-  drawModal(modalFrag);
+  const cl = document.querySelector(".main__project--container").classList;
+  const now = cl[1];
+
+  if (now !== "cgv") {
+    document
+      .querySelector(".main__project--container")
+      .classList.remove(`${now}`);
+    document.querySelector(".main__project--container").classList.add("cgv");
+
+    const frag = document.importNode(templates.cgv, true);
+    const modalFrag = document.importNode(templates.modalCgv, true);
+    drawProject(frag, "cgv");
+    drawModal(modalFrag);
+  }
 });
 
 // brickid 클릭
 const brickidButton = document.querySelector(".list-brickid");
 
 brickidButton.addEventListener("click", () => {
-  const frag = document.importNode(templates.brickid, true);
-  const modalFrag = document.importNode(templates.modalBrickid, true);
+  const cl = document.querySelector(".main__project--container").classList;
+  const now = cl[1];
 
-  drawProject(frag);
-  drawModal(modalFrag);
+  if (now !== "brickid") {
+    document
+      .querySelector(".main__project--container")
+      .classList.remove(`${now}`);
+    document
+      .querySelector(".main__project--container")
+      .classList.add("brickid");
+
+    const frag = document.importNode(templates.brickid, true);
+    const modalFrag = document.importNode(templates.modalBrickid, true);
+
+    drawProject(frag);
+    drawModal(modalFrag);
+  }
 });
 
 // 모달 열기 버튼
@@ -75,3 +97,14 @@ const close = document.querySelector(".item-modal-close");
 close.addEventListener("click", () => {
   document.querySelector(".item-modal").classList.remove("item-modal-active");
 });
+
+// 기본 project로 move-site 넣어주기
+(function() {
+  document.querySelector(".main__project--container").classList.add("cgv");
+
+  const frag = document.importNode(templates.cgv, true);
+  const modalFrag = document.importNode(templates.modalCgv, true);
+
+  drawProject(frag);
+  drawModal(modalFrag);
+})();
