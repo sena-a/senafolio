@@ -207,7 +207,7 @@ var link = myChart
   .data(links)
   .enter()
   .append("line")
-  .attr("stroke", palette.lightgray)
+  .attr("stroke", "#b8bce4")
   .attr("strokewidth", "1");
 
 var node = myChart
