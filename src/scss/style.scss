@@ -748,6 +748,10 @@ a:hover {
       padding: 7px 11px;
       border: 1px solid $skill;
     }
+    p:nth-child(5) {
+      font-size: 0.7rem;
+      margin-top: 50px;
+    }
     .about-link {
       text-align: center;
       font-size: 0.7rem;

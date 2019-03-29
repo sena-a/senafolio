@@ -156,7 +156,6 @@ document.addEventListener("scroll", () => {
   const headerIntro = document.querySelector(".header__title--intro");
   const skillChart = document.querySelector(".skill-chart");
   const skillCode = document.querySelector(".skill-code");
-  console.log(scroll);
   if (scroll < 250) {
     headerTitle.classList.add("fadeInDown");
     headerIntro.classList.add("fadeIn");
@@ -256,7 +255,7 @@ node
     return d.y;
   })
   .attr("r", function(d, i) {
-    console.log(d.value);
+    // console.log(d.value);
     if (i > 0) {
       return circleWidth + d.value;
     } else {
@@ -331,7 +330,7 @@ node
     }
   })
   .attr("fill", function(d, i) {
-    console.log(d.value);
+    // console.log(d.value);
     if (i > 0 && d.value < 10) {
       return "#fff";
     } else if (i > 0 && d.value > 10) {
