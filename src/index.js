@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+  window.scrollTo(0, 0);
+});
+
 // 변수 선언
 const body = document.body;
 
@@ -144,6 +148,32 @@ close.addEventListener("click", () => {
   drawModal(modalFrag);
 })();
 
+// 화면 노출 시 애니메이션 삽입 테스트
+
+document.addEventListener("scroll", () => {
+  const scroll = window.scrollY;
+  const headerTitle = document.querySelector(".header__title--name");
+  const headerIntro = document.querySelector(".header__title--intro");
+  const skillChart = document.querySelector(".skill-chart");
+  const skillCode = document.querySelector(".skill-code");
+  console.log(scroll);
+  if (scroll < 250) {
+    headerTitle.classList.add("fadeInDown");
+    headerIntro.classList.add("fadeIn");
+    skillChart.classList.remove("slideInUp");
+    skillCode.classList.remove("fadeIn");
+  } else if (scroll > 250 && scroll < 1100) {
+    headerTitle.classList.remove("fadeInDown");
+    headerIntro.classList.remove("fadeIn");
+    skillChart.classList.add("slideInUp");
+    skillCode.classList.add("fadeIn");
+  } else {
+    headerTitle.classList.remove("fadeInDown");
+    headerIntro.classList.remove("fadeIn");
+    skillChart.classList.remove("slideInUp");
+    skillCode.classList.remove("fadeIn");
+  }
+});
 // about 그래프
 // 출처: https://codepen.io/ames/pen/xZzREM?editors=0010
 
