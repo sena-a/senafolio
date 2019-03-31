@@ -649,7 +649,7 @@ img {
 }
 @include carousel;
 
-// 작은 데스크탑
+// 작은 데스크탑 (1100px ~ 851px)
 
 @include respond-to("1100") {
   .main {
@@ -657,6 +657,59 @@ img {
       .project-list {
         left: calc(50% - 395px);
         width: 130px;
+      }
+    }
+  }
+}
+
+// 테블릿 (850px ~ 551px)
+@include respond-to("850") {
+  .main {
+    &__project {
+      padding: 80px 0;
+      &--container {
+        display: block;
+        height: inherit;
+        text-align: center;
+      }
+      .project-list {
+        position: static;
+        width: 100%;
+        text-align: center;
+        p {
+          display: inline-block;
+          border: 1px solid white;
+          border-radius: 3px;
+        }
+      }
+      .project-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 35px;
+        .item-link {
+          margin-bottom: 25px;
+        }
+        .item-figure {
+          display: block;
+          .used {
+            position: static;
+            width: 500px;
+            margin: 50px 5px 0;
+            text-align: left;
+            p {
+              display: inline-block;
+            }
+          }
+        }
+      }
+      .modal-open {
+        position: static;
+        text-align: center;
+        display: inline-block;
+        margin: 10px;
+        border: 1px solid white;
       }
     }
   }
