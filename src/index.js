@@ -148,7 +148,7 @@ close.addEventListener("click", () => {
   drawModal(modalFrag);
 })();
 
-// 화면 노출 시 애니메이션 삽입 테스트
+// 화면 노출 시 애니메이션 삽입
 
 document.addEventListener("scroll", () => {
   const scroll = window.scrollY;
