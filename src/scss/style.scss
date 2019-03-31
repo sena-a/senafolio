@@ -402,7 +402,7 @@ a:hover {
         &-active {
           display: block;
           position: fixed;
-          width: 100vw;
+          width: 100%;
           height: 100vh;
           top: 0;
           left: 0;
@@ -435,12 +435,13 @@ a:hover {
           .item-about {
             font-family: "Nanum Gothic", sans-serif;
             letter-spacing: -1px;
+            line-height: 1rem;
             // width: 440px;
             // border: 1px solid $main;
             // border-radius: 3px;
             // padding: 30px;
             li {
-              margin: 10px 0;
+              margin: 7px 0;
             }
             & > li::before,
             ol::before {
@@ -710,6 +711,19 @@ img {
         display: inline-block;
         margin: 10px;
         border: 1px solid white;
+      }
+      .item-modal {
+        text-align: left;
+        &-container {
+          margin: 20px;
+          img {
+            top: -35px;
+            left: -5px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
