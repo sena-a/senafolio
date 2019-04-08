@@ -173,6 +173,7 @@ document.addEventListener("scroll", () => {
     skillCode.classList.remove("fadeIn");
   }
 });
+
 // about 그래프
 // 출처: https://codepen.io/ames/pen/xZzREM?editors=0010
 
@@ -192,13 +193,13 @@ var colors = d3.scale.category20();
 var nodes = [
   { name: "SENA" },
   { name: "고양이", target: [0], value: 73 },
-  { name: "세렌디피티", target: [0, 1], value: 69 },
-  { name: "보라색", target: [0, 1, 2], value: 33 },
-  { name: "초코", target: [0, 1, 2, 8], value: 42 },
+  { name: "습득력", target: [0, 1], value: 65 },
+  { name: "재미", target: [0, 1, 2], value: 43 },
+  { name: "예쁜 코드", target: [0, 1, 2, 8], value: 52 },
   { name: "밀크티", target: [0, 3, 4], value: 42 },
   { name: "책", target: [0, 1, 2], value: 38 },
   { name: "웃음", target: [0, 3], value: 54 },
-  { name: "영화", target: [0, 3, 4, 5], value: 47 }
+  { name: "집요함", target: [0, 3, 4, 5], value: 47 }
 ];
 
 var links = [];
@@ -263,15 +264,6 @@ node
     }
   })
   .attr("fill", function(d, i) {
-    // if (i > 5) {
-    //   return "#9a9fd9";
-    // } else if (i > 3) {
-    //   return "#7972a0";
-    // } else if (i > 0) {
-    //   return "#d5d7fc";
-    // } else {
-    //   return "#fff";
-    // }
     if (i > 5) {
       return "#7875b6";
     } else if (i > 3) {
