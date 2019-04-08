@@ -403,6 +403,8 @@ a:hover {
           display: block;
           position: fixed;
           width: 100%;
+          min-width: 500px;
+
           height: 100vh;
           top: 0;
           left: 0;
@@ -414,6 +416,7 @@ a:hover {
         }
         // color: black;
         &-container {
+          width: 400px;
           background: $main;
           padding: 40px;
           border: 2px solid white;

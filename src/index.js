@@ -1,6 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-  window.scrollTo(0, 0);
-});
+console.log("%cDo u want some purple?", "color:#9a9fd9; font-size:large");
+console.log(
+  "%c       ",
+  "font-size: 160px; background:url(https://res.cloudinary.com/dnj3azhtb/image/upload/c_scale,q_auto:eco,w_180/v1554720108/senafolio/senafolio-console.jpg) no-repeat;"
+);
 
 // 변수 선언
 const body = document.body;
