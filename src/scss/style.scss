@@ -140,14 +140,14 @@ a:hover {
       .skill-code {
         width: 468px;
         background: $code;
-        margin: 130px auto 0;
+        margin: 60px auto 0;
         text-align: left;
         border-radius: 7px;
         animation-delay: 0.8s;
         animation-duration: 1s;
         code {
           display: inline-block;
-          margin: 7px auto 0;
+          padding: 7px 0;
           font-weight: bold;
           color: black;
           span {
@@ -625,25 +625,13 @@ a:hover {
     height: 30px;
     position: absolute;
     right: 10px;
-    top: -35px;
   }
 }
 .footer {
   text-align: center;
   font-size: 0.7rem;
   padding: 15px;
-  color: white;
-  background: #c9d6ff; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #e2e2e2,
-    #c9d6ff
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #e2e2e2,
-    #c9d6ff
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: black;
 }
 img {
   width: 100%;
