@@ -151,7 +151,6 @@ close.addEventListener("click", () => {
 })();
 
 // 화면 노출 시 애니메이션 삽입
-
 document.addEventListener("scroll", () => {
   const scroll = window.scrollY;
   const headerTitle = document.querySelector(".header__title--name");
@@ -276,20 +275,6 @@ node
       return "#fff";
     }
   });
-// .attr("strokewidth", function(d, i) {
-//   if (i > 0) {
-//     return "0";
-//   } else {
-//     return "1";
-//   }
-// })
-// .attr("stroke", function(d, i) {
-//   if (i > 0) {
-//     return "";
-//   } else {
-//     return "#7972a0";
-//   }
-// });
 
 force.on("tick", function(e) {
   node.attr("transform", function(d, i) {
@@ -324,7 +309,6 @@ node
     }
   })
   .attr("fill", function(d, i) {
-    // console.log(d.value);
     if (i > 0 && d.value < 10) {
       return "#fff";
     } else if (i > 0 && d.value > 10) {

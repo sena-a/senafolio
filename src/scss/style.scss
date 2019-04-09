@@ -8,10 +8,10 @@
 html {
   scroll-behavior: smooth;
 }
-// 기본 스타일
 
+// 기본 스타일
 body {
-  min-width: 550px;
+  min-width: 320px;
   font-family: "Playfair Display", serif;
 }
 a,
@@ -23,7 +23,7 @@ a:hover {
   text-decoration: none;
 }
 
-// 데스크탑
+// // 데스크탑
 
 // 헤더
 .header {
@@ -91,9 +91,6 @@ a:hover {
   a {
     margin: 0 0.9rem;
   }
-  // &:nth-child(2) {
-  //   margin-right: 1.5rem;
-  // }
 }
 
 // 메인
@@ -109,7 +106,6 @@ a:hover {
       height: 35px;
     }
     &--title {
-      font-size: 1.5rem;
       margin: 2.5rem 0;
       p {
         font-size: 0.8rem;
@@ -118,67 +114,21 @@ a:hover {
     }
     &--container {
       .skill-chart {
-        display: flex;
-        justify-content: center;
-        font-size: 0.8rem;
-        animation-duration: 1.5s;
         .skill {
           display: inline-block;
-          width: 50px;
-          height: 50px;
-          border: 1px solid $skill;
           margin: 4px;
-          padding: 4px;
           text-align: center;
-          line-height: 51px;
-          p {
-            font-size: 0.7rem;
-          }
-        }
-        @include large-progress;
-      }
-      .skill-code {
-        width: 468px;
-        background: $code;
-        margin: 60px auto 0;
-        text-align: left;
-        border-radius: 7px;
-        animation-delay: 0.8s;
-        animation-duration: 1s;
-        code {
-          display: inline-block;
-          padding: 7px 0;
-          font-weight: bold;
-          color: black;
-          span {
-            display: inline-block;
-            margin: 5px 0;
-            font-family: "Source Code Pro", monospace;
-          }
-          .func {
-            color: rgb(177, 39, 62);
-          }
-          .dec {
-            color: rgb(110, 169, 187);
-          }
-          .var {
-            color: rgb(218, 80, 17);
-          }
-          .str {
-            color: rgb(114, 60, 241);
-          }
-          .method {
-            color: rgb(46, 168, 46);
-          }
         }
       }
     }
   }
+  //프로젝트
   &__project {
     width: 100%;
     font-size: 0.8rem;
     padding: 90px 0 110px;
     background: $main;
+    @include carousel;
     > img {
       padding: 120px 0 90px;
       width: 35px;
@@ -243,7 +193,6 @@ a:hover {
           font-size: 0.7rem;
           margin-bottom: 35px;
           a {
-            // border: 1px solid $main;
             padding: 8px 8px 9px;
             margin: 0 3px;
             border-radius: 3px;
@@ -294,7 +243,6 @@ a:hover {
             position: absolute;
             left: 515px;
             font-size: 0.8rem;
-            // width: 160px;
             width: 120px;
             p {
               margin-bottom: 12px;
@@ -304,11 +252,8 @@ a:hover {
         .item-introduce {
           .item-date {
             font-size: 0.8rem;
-            // position: absolute;
-            // width: 110px;
             margin: 0 auto;
             text-align: center;
-            // top: -80px;
             border: 1px solid white;
             padding: 10px;
             border-radius: 3px;
@@ -320,9 +265,7 @@ a:hover {
             font-size: 0.7rem;
             position: absolute;
             top: -60px;
-            // padding: 11px;
             a {
-              // border: 1px solid $main;
               padding: 8px 8px 9px;
               margin: 0 3px;
               border-radius: 3px;
@@ -371,10 +314,8 @@ a:hover {
         left: calc(50% - 375px);
         top: 190px;
         font-size: 0.7rem;
-        // border: 1px solid #fff;
         border-radius: 3px;
         padding: 2px 10px 10px 7px;
-        // margin: 20px 0;
         margin-left: -2px;
         margin-bottom: 15px;
         cursor: pointer;
@@ -399,12 +340,11 @@ a:hover {
       }
       .item-modal {
         display: none;
+        min-width: 320px;
         &-active {
           display: block;
           position: fixed;
           width: 100%;
-          min-width: 500px;
-
           height: 100vh;
           top: 0;
           left: 0;
@@ -414,7 +354,6 @@ a:hover {
           justify-content: center;
           align-items: center;
         }
-        // color: black;
         &-container {
           width: 400px;
           background: $main;
@@ -439,10 +378,6 @@ a:hover {
             font-family: "Nanum Gothic", sans-serif;
             letter-spacing: -1px;
             line-height: 1rem;
-            // width: 440px;
-            // border: 1px solid $main;
-            // border-radius: 3px;
-            // padding: 30px;
             li {
               margin: 7px 0;
             }
@@ -486,6 +421,8 @@ a:hover {
       }
     }
   }
+
+  // about
   &__about {
     text-align: center;
     padding: 90px 0 20px;
@@ -495,22 +432,12 @@ a:hover {
       height: 15px;
     }
     &--title {
-      font-size: 1.3rem;
       margin: 30px 0 0;
     }
     p:nth-child(4) {
       display: inline-block;
-      font-size: 0.8rem;
-      background: white;
-      // position: absolute;
-      left: calc(50% - 250px);
-      margin-top: 40px;
       padding: 7px 11px;
       border: 1px solid $skill;
-    }
-    p:nth-child(5) {
-      font-size: 0.7rem;
-      margin-top: 50px;
     }
     .about-link {
       text-align: center;
@@ -518,10 +445,7 @@ a:hover {
       margin: 15px 0;
       a {
         display: inline-block;
-        // width: 70px;
-        padding: 6px 8px 9px;
         margin: 0 3px;
-        // border-radius: 3px;
         &::before {
           display: inline-block;
           content: "";
@@ -538,57 +462,27 @@ a:hover {
           background: url("../images/mail.svg") no-repeat;
           background-size: contain;
         }
-        &:hover {
-          background: $main;
-          color: white;
-          &:nth-child(1)::before {
-            background: url("../images/git-hover.svg") no-repeat;
-            background-size: contain;
-          }
-          &:nth-child(2)::before {
-            background: url("../images/mail-hover.svg") no-repeat;
-            background-size: contain;
-          }
-        }
       }
     }
     text {
       transform: translateY(7px);
-    }
-    .svg-container {
-      width: 550px;
-      height: 440px;
-      margin: 0 auto;
-      // border: 1px solid $skill;
-      transform: translateY(-20px);
     }
   }
   &__activity {
     text-align: center;
     & > p:nth-child(1) {
       display: inline-block;
-      font-size: 0.8rem;
-      background: white;
-      // position: absolute;
-      left: calc(50% - 250px);
       margin: 0 auto;
       padding: 7px 11px;
       border: 1px solid $skill;
     }
     &--container {
-      padding: 60px 0 170px;
-      display: flex;
-      justify-content: center;
       img {
-        width: 200px;
-        height: 130px;
         -webkit-filter: grayscale(100%);
         filter: gray;
         margin: 0 10px;
       }
       .siotz {
-        font-size: 0.85rem;
-        text-align: left;
         width: 220px;
         p {
           margin-bottom: 5px;
@@ -608,7 +502,6 @@ a:hover {
             display: inline-block;
             margin: 10px 7px 0 0;
             border: 1px solid $skill;
-            // border-radius: 3px;
             padding: 5px;
             &:hover {
               background: $skill;
@@ -620,14 +513,12 @@ a:hover {
     }
   }
 }
+
 .top {
-  position: relative;
   cursor: pointer;
   img {
     width: 30px;
     height: 30px;
-    position: absolute;
-    right: 10px;
   }
 }
 .footer {
@@ -636,14 +527,155 @@ a:hover {
   padding: 15px;
   color: black;
 }
-img {
-  width: 100%;
+
+// 기본 데스크탑
+@include respond-to("basic") {
+  // 메인
+  .main {
+    // 스킬
+    &__skills {
+      &--title {
+        font-size: 1.5rem;
+      }
+      &--container {
+        .skill-chart {
+          display: flex;
+          justify-content: center;
+          font-size: 0.8rem;
+          animation-duration: 1.5s;
+          .skill {
+            width: 50px;
+            height: 50px;
+            border: 1px solid $skill;
+            padding: 4px;
+            line-height: 51px;
+            p {
+              font-size: 0.7rem;
+            }
+          }
+          @include large-progress;
+          .skill-small {
+            display: none;
+          }
+        }
+        .skill-code {
+          width: 468px;
+          background: $code;
+          margin: 60px auto 0;
+          text-align: left;
+          border-radius: 7px;
+          animation-delay: 0.8s;
+          animation-duration: 1s;
+          code {
+            display: inline-block;
+            padding: 7px 0;
+            font-weight: bold;
+            color: black;
+            span {
+              display: inline-block;
+              margin: 5px 0;
+              font-family: "Source Code Pro", monospace;
+            }
+            .func {
+              color: rgb(177, 39, 62);
+            }
+            .dec {
+              color: rgb(110, 169, 187);
+            }
+            .var {
+              color: rgb(218, 80, 17);
+            }
+            .str {
+              color: rgb(114, 60, 241);
+            }
+            .method {
+              color: rgb(46, 168, 46);
+            }
+          }
+        }
+      }
+    }
+    // 프로젝트
+    &__project {
+      .item-modal {
+        &-active {
+          min-width: 500px;
+        }
+      }
+    }
+    &__about {
+      &--title {
+        font-size: 1.3rem;
+      }
+      p:nth-child(4) {
+        font-size: 0.8rem;
+        background: white;
+        left: calc(50% - 250px);
+        margin-top: 40px;
+      }
+      p:nth-child(5) {
+        font-size: 0.7rem;
+        margin-top: 50px;
+      }
+      .about-link {
+        a {
+          padding: 6px 8px 9px;
+          &:hover {
+            background: $main;
+            color: white;
+            &:nth-child(1)::before {
+              background: url("../images/git-hover.svg") no-repeat;
+              background-size: contain;
+            }
+            &:nth-child(2)::before {
+              background: url("../images/mail-hover.svg") no-repeat;
+              background-size: contain;
+            }
+          }
+        }
+      }
+      .svg-container {
+        width: 550px;
+        height: 440px;
+        margin: 0 auto;
+        transform: translateY(-20px);
+      }
+    }
+    &__activity {
+      & > p:nth-child(1) {
+        font-size: 0.8rem;
+        background: white;
+        left: calc(50% - 250px);
+      }
+      &--container {
+        padding: 60px 0 170px;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 200px;
+          height: 130px;
+        }
+        .siotz {
+          font-size: 0.85rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .top {
+    position: relative;
+    img {
+      position: absolute;
+      right: 10px;
+    }
+  }
+  img {
+    width: 100%;
+  }
 }
-@include carousel;
 
 // 작은 데스크탑 (1100px ~ 851px)
-
-@include respond-to("1100") {
+@include respond-to("large") {
   .main {
     &__project {
       .project-list {
@@ -655,7 +687,7 @@ img {
 }
 
 // 테블릿 (850px ~ 551px)
-@include respond-to("850") {
+@include respond-to("medium") {
   .main {
     &__project {
       padding: 80px 0;
@@ -718,6 +750,206 @@ img {
     }
   }
 }
+
+// 모바일
+
+@include respond-to("small") {
+  // 헤더
+  .header {
+    &__title {
+      &--name {
+        font-size: 2rem;
+        animation-duration: 1.5s;
+      }
+      &--intro {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  // 메인
+  .main {
+    //스킬
+    &__skills {
+      &--title {
+        font-size: 1.2rem;
+      }
+      &--container {
+        margin-top: 40px;
+        .skill-chart {
+          font-size: 0.7rem;
+          .skill {
+            width: calc(50% - 80px);
+            min-width: 170px;
+            padding: 10px 0;
+            & p:nth-child(1) {
+              border: 1px solid $small;
+              display: inline-block;
+              width: 50px;
+              padding: 5px;
+              background: $small;
+              color: white;
+              margin: 15px 0;
+            }
+          }
+          #other {
+            display: none;
+          }
+          .skill-small {
+            font-family: "Nanum Gothic", sans-serif;
+            margin: 10px 0 0;
+          }
+        }
+        .skill-code {
+          display: none;
+        }
+      }
+    }
+    // 프로젝트
+    &__project {
+      font-size: 0.7rem;
+      padding: 90px 0 0;
+      .cgv {
+        .list-cgv {
+          border-radius: 0px;
+        }
+      }
+      .brickid {
+        .list-brickid {
+          border-radius: 0px;
+        }
+      }
+      .omok {
+        .list-omok {
+          border-radius: 0px;
+        }
+      }
+      &--container {
+        text-align: center;
+        display: block;
+        position: static;
+        .project-list {
+          display: flex;
+          justify-content: center;
+          position: static;
+          p {
+            padding: 7px 5px;
+            border-radius: 0px;
+            &:hover {
+              border-radius: 0px;
+            }
+            &.active {
+              border-radius: 0px;
+            }
+          }
+        }
+        .project-item {
+          margin: 40px 6px 6px;
+          .item-link {
+            width: 100%;
+            margin-bottom: 30px;
+            a {
+              padding: 3px 6px;
+              border-radius: 0px;
+            }
+          }
+          .item-figure {
+            width: 100%;
+            .carousel {
+              width: 100%;
+              margin: 0 auto;
+            }
+            .used {
+              text-align: center;
+              position: static;
+              margin-top: 35px;
+              width: 100%;
+              font-size: 0.7rem;
+              p {
+                display: inline-block;
+                margin: 5px 2px;
+              }
+            }
+          }
+        }
+        .modal-open {
+          position: static;
+          display: inline-block;
+          border: 1px solid white;
+          margin: 40px 0 80px;
+          border-radius: 0px;
+        }
+        .item-modal {
+          &-container {
+            padding: 20px;
+            margin: 20px;
+            text-align: left;
+            min-width: 220px;
+            .item-about {
+              ol {
+                li {
+                  margin-left: 40px;
+                }
+              }
+            }
+            img {
+              top: -35px;
+              left: calc(50% - 13px);
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+      }
+    }
+    // about
+    &__about {
+      font-size: 0.7rem;
+      &--title {
+        font-size: 1.1rem;
+      }
+      .about-link {
+        a {
+          padding: 3px 4px 6px;
+        }
+      }
+      p:nth-child(4) {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 7px 11px;
+      }
+      p:nth-child(5) {
+        display: none;
+      }
+    }
+    // activity
+    &__activity {
+      font-size: 0.7rem;
+      & > p:nth-child(1) {
+        margin-top: 20px;
+      }
+      &--container {
+        padding: 40px 0;
+        img {
+          width: 250px;
+          height: 170px;
+        }
+        .siotz {
+          font-size: 0.8rem;
+          margin: 30px auto;
+          &-link {
+            margin: 20px;
+          }
+        }
+      }
+    }
+  }
+  .top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+}
+
 // drag style
 ::selection {
   background: #cfcdf5;

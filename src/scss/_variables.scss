@@ -1,6 +1,7 @@
 // 배경 색
 // $skill: #685e92;
 $skill: #7972a0;
+$small: #9ea2d3;
 $main: #9a9fd9;
 // $d: #b8bce4;
 // $project: rgb(31, 20, 51);
@@ -15,13 +16,16 @@ $modal-bg: rgb(127, 121, 163);
 
 // 중단점 변수
 $breakpoints: (
-  "small": (
-    max-width: 479px
+  "basic": (
+    min-width: 551px
   ),
-  "850": (
+  "small": (
+    max-width: 550px
+  ),
+  "medium": (
     max-width: 850px
   ),
-  "1100": (
+  "large": (
     max-width: 1100px
   )
 );
