@@ -199,7 +199,7 @@ var nodes = [
   { name: "예쁜 코드", target: [0, 1, 2, 8], value: 52 },
   { name: "밀크티", target: [0, 3, 4], value: 42 },
   { name: "책", target: [0, 1, 2], value: 38 },
-  { name: "", target: [0, 3], value: 54 },
+  { name: "성장", target: [0, 3], value: 54 },
   { name: "집요", target: [0, 3, 4, 5], value: 47 }
 ];
 
