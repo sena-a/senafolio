@@ -1,4 +1,4 @@
-console.log("%cDo u want some purple?", "color:#9a9fd9; font-size:large");
+console.log("%cmake the world a better place!", "color:#9a9fd9; font-size:large");
 console.log(
   "%c       ",
   "font-size: 160px; background:url(https://res.cloudinary.com/dnj3azhtb/image/upload/c_scale,q_auto:eco,w_180/v1554720108/senafolio/senafolio-console.jpg) no-repeat;"
@@ -195,12 +195,12 @@ var nodes = [
   { name: "SENA" },
   { name: "고양이", target: [0], value: 73 },
   { name: "습득력", target: [0, 1], value: 65 },
-  { name: "재미", target: [0, 1, 2], value: 43 },
+  { name: "fun", target: [0, 1, 2], value: 43 },
   { name: "예쁜 코드", target: [0, 1, 2, 8], value: 52 },
   { name: "밀크티", target: [0, 3, 4], value: 42 },
   { name: "책", target: [0, 1, 2], value: 38 },
-  { name: "웃음", target: [0, 3], value: 54 },
-  { name: "집요함", target: [0, 3, 4, 5], value: 47 }
+  { name: "", target: [0, 3], value: 54 },
+  { name: "집요", target: [0, 3, 4, 5], value: 47 }
 ];
 
 var links = [];
