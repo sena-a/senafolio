@@ -51,19 +51,19 @@ a:hover {
     p {
       color: white;
     }
-    &--name {
-      font-weight: bold;
-      margin-bottom: 12px;
-      font-size: 2.8rem;
-      animation-duration: 1.5s;
-    }
-    &--intro {
-      animation-delay: 1.5s;
-      animation-duration: 1s;
-      p {
-        line-height: 110%;
-        margin: 7px;
-      }
+  }
+  &__name {
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 2.8rem;
+    animation-duration: 1.5s;
+  }
+  &__intro {
+    animation-delay: 1.5s;
+    animation-duration: 1s;
+    p {
+      line-height: 110%;
+      margin: 7px;
     }
   }
   &__arrow {
@@ -105,21 +105,19 @@ a:hover {
       width: 35px;
       height: 35px;
     }
-    &--title {
+  }
+  .skills {
+    &__title {
       margin: 2.5rem 0;
       p {
         font-size: 0.8rem;
         margin: 1.5rem;
       }
     }
-    &--container {
-      .skill-chart {
-        .skill {
-          display: inline-block;
-          margin: 4px;
-          text-align: center;
-        }
-      }
+    &__item {
+      display: inline-block;
+      margin: 4px;
+      text-align: center;
     }
   }
   //프로젝트
@@ -155,160 +153,15 @@ a:hover {
         color: $main;
       }
     }
-    &--container {
+  }
+  .project {
+    &__container {
       width: 100%;
       height: 375px;
       color: white;
       display: flex;
       justify-content: center;
       position: relative;
-      .project-list {
-        position: absolute;
-        top: 50px;
-        left: calc(50% - 465px);
-        text-align: right;
-        width: 200px;
-        cursor: pointer;
-        p {
-          &:hover {
-            background: white;
-            border-radius: 3px;
-            color: $main;
-          }
-          &.active {
-            background: white;
-            border-radius: 3px;
-            color: $main;
-          }
-          margin: 6px;
-          padding: 11px;
-        }
-      }
-      .project-item {
-        margin: 6px;
-        position: relative;
-        .item-link {
-          width: 500px;
-          text-align: center;
-          font-size: 0.7rem;
-          margin-bottom: 35px;
-          a {
-            padding: 8px 8px 9px;
-            margin: 0 3px;
-            border-radius: 3px;
-            &::before {
-              display: inline-block;
-              content: "";
-              width: 0.8rem;
-              height: 0.8rem;
-              transform: translateY(0.15rem);
-              margin-right: 4px;
-            }
-            &:nth-child(1)::before {
-              background: url("../images/web.svg") no-repeat;
-              background-size: contain;
-            }
-            &:nth-child(2)::before {
-              background: url("../images/github.svg") no-repeat;
-              background-size: contain;
-            }
-            &:nth-child(3)::before {
-              background: url("../images/video.svg") no-repeat;
-              background-size: contain;
-            }
-            &:hover {
-              background: white;
-              color: $main;
-              &:nth-child(1)::before {
-                background: url("../images/web-hover.svg") no-repeat;
-                background-size: contain;
-              }
-              &:nth-child(2)::before {
-                background: url("../images/github-hover.svg") no-repeat;
-                background-size: contain;
-              }
-              &:nth-child(3)::before {
-                background: url("../images/video-hover.svg") no-repeat;
-                background-size: contain;
-              }
-            }
-          }
-        }
-        .item-figure {
-          display: flex;
-          .carousel {
-            width: 500px;
-          }
-          .used {
-            position: absolute;
-            left: 515px;
-            font-size: 0.8rem;
-            width: 120px;
-            p {
-              margin-bottom: 12px;
-            }
-          }
-        }
-        .item-introduce {
-          .item-date {
-            font-size: 0.8rem;
-            margin: 0 auto;
-            text-align: center;
-            border: 1px solid white;
-            padding: 10px;
-            border-radius: 3px;
-            margin-top: 60px;
-          }
-          .item-link {
-            width: 500px;
-            text-align: center;
-            font-size: 0.7rem;
-            position: absolute;
-            top: -60px;
-            a {
-              padding: 8px 8px 9px;
-              margin: 0 3px;
-              border-radius: 3px;
-              &::before {
-                display: inline-block;
-                content: "";
-                width: 0.8rem;
-                height: 0.8rem;
-                transform: translateY(0.15rem);
-                margin-right: 4px;
-              }
-              &:nth-child(1)::before {
-                background: url("../images/web.svg") no-repeat;
-                background-size: contain;
-              }
-              &:nth-child(2)::before {
-                background: url("../images/github.svg") no-repeat;
-                background-size: contain;
-              }
-              &:nth-child(3)::before {
-                background: url("../images/video.svg") no-repeat;
-                background-size: contain;
-              }
-              &:hover {
-                background: white;
-                color: $main;
-                &:nth-child(1)::before {
-                  background: url("../images/web-hover.svg") no-repeat;
-                  background-size: contain;
-                }
-                &:nth-child(2)::before {
-                  background: url("../images/github-hover.svg") no-repeat;
-                  background-size: contain;
-                }
-                &:nth-child(3)::before {
-                  background: url("../images/video-hover.svg") no-repeat;
-                  background-size: contain;
-                }
-              }
-            }
-          }
-        }
-      }
       .modal-open {
         position: absolute;
         left: calc(50% - 375px);
@@ -338,10 +191,10 @@ a:hover {
           }
         }
       }
-      .item-modal {
+      .modal {
         display: none;
         min-width: 320px;
-        &-active {
+        &--active {
           display: block;
           position: fixed;
           width: 100%;
@@ -354,18 +207,12 @@ a:hover {
           justify-content: center;
           align-items: center;
         }
-        &-container {
+        &__container {
           width: 400px;
           background: $main;
           padding: 40px;
           border: 2px solid white;
           position: relative;
-          .item- {
-            &date {
-              font-size: 1rem;
-              margin-bottom: 20px;
-            }
-          }
           img {
             position: absolute;
             top: -4px;
@@ -374,48 +221,140 @@ a:hover {
             height: 35px;
             cursor: pointer;
           }
-          .item-about {
-            font-family: "Nanum Gothic", sans-serif;
-            letter-spacing: -1px;
-            line-height: 1rem;
-            li {
-              margin: 7px 0;
-            }
-            & > li::before,
-            ol::before {
-              display: inline-block;
-              content: "";
-              width: 1.2rem;
-              height: 1.2rem;
-              background: url("../images/check.svg") no-repeat;
-              background-size: contain;
-              transform: translateY(0.25rem);
-            }
-            & > li::before {
-              margin-right: 10px;
-            }
-            ol::before {
-              margin-right: 8px;
-            }
-            ol {
-              li:nth-child(1) {
-                margin-top: 20px;
-              }
-              li {
-                margin-left: 60px;
-                position: relative;
-                &::before {
-                  display: inline-block;
-                  content: "";
-                  width: 7px;
-                  background: white;
-                  height: 1px;
-                  position: absolute;
-                  top: 50%;
-                  left: -15px;
-                }
-              }
-            }
+        }
+      }
+    }
+    &__list {
+      position: absolute;
+      top: 50px;
+      left: calc(50% - 465px);
+      text-align: right;
+      width: 200px;
+      cursor: pointer;
+      p {
+        &:hover {
+          background: white;
+          border-radius: 3px;
+          color: $main;
+        }
+        &.active {
+          background: white;
+          border-radius: 3px;
+          color: $main;
+        }
+        margin: 6px;
+        padding: 11px;
+      }
+    }
+    &__item {
+      margin: 6px;
+      position: relative;
+    }
+    &__link {
+      width: 500px;
+      text-align: center;
+      font-size: 0.7rem;
+      margin-bottom: 35px;
+      a {
+        padding: 8px 8px 9px;
+        margin: 0 3px;
+        border-radius: 3px;
+        &::before {
+          display: inline-block;
+          content: "";
+          width: 0.8rem;
+          height: 0.8rem;
+          transform: translateY(0.15rem);
+          margin-right: 4px;
+        }
+        &:nth-child(1)::before {
+          background: url("../images/web.svg") no-repeat;
+          background-size: contain;
+        }
+        &:nth-child(2)::before {
+          background: url("../images/github.svg") no-repeat;
+          background-size: contain;
+        }
+        &:nth-child(3)::before {
+          background: url("../images/video.svg") no-repeat;
+          background-size: contain;
+        }
+        &:hover {
+          background: white;
+          color: $main;
+          &:nth-child(1)::before {
+            background: url("../images/web-hover.svg") no-repeat;
+            background-size: contain;
+          }
+          &:nth-child(2)::before {
+            background: url("../images/github-hover.svg") no-repeat;
+            background-size: contain;
+          }
+          &:nth-child(3)::before {
+            background: url("../images/video-hover.svg") no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+    &__figure {
+      display: flex;
+      .carousel {
+        width: 500px;
+      }
+      .used {
+        position: absolute;
+        left: 515px;
+        font-size: 0.8rem;
+        width: 120px;
+        p {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    &__date {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    &__about {
+      font-family: "Nanum Gothic", sans-serif;
+      letter-spacing: -1px;
+      line-height: 1rem;
+      li {
+        margin: 7px 0;
+      }
+      & > li::before,
+      ol::before {
+        display: inline-block;
+        content: "";
+        width: 1.2rem;
+        height: 1.2rem;
+        background: url("../images/check.svg") no-repeat;
+        background-size: contain;
+        transform: translateY(0.25rem);
+      }
+      & > li::before {
+        margin-right: 10px;
+      }
+      ol::before {
+        margin-right: 8px;
+      }
+      ol {
+        li:nth-child(1) {
+          margin-top: 20px;
+        }
+        li {
+          margin-left: 60px;
+          position: relative;
+          &::before {
+            display: inline-block;
+            content: "";
+            width: 7px;
+            background: white;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            left: -15px;
           }
         }
       }
@@ -470,44 +409,46 @@ a:hover {
   }
   &__activity {
     text-align: center;
-    & > p:nth-child(1) {
+  }
+  .activity {
+    &__title {
       display: inline-block;
       margin: 0 auto;
       padding: 7px 11px;
       border: 1px solid $skill;
     }
-    &--container {
+    &__container {
       img {
         -webkit-filter: grayscale(100%);
         filter: gray;
         margin: 0 10px;
       }
-      .siotz {
-        width: 220px;
-        p {
-          margin-bottom: 5px;
-          line-height: 1rem;
-        }
-        p:nth-child(1) {
-          font-size: 1rem;
-        }
-        p:nth-child(3) {
-          margin-top: 8px;
-          font-family: "Nanum Gothic", sans-serif;
-          letter-spacing: -1px;
-        }
-        &-link {
-          font-size: 0.7rem;
-          a {
-            display: inline-block;
-            margin: 10px 7px 0 0;
-            border: 1px solid $skill;
-            padding: 5px;
-            &:hover {
-              background: $skill;
-              color: white;
-            }
-          }
+    }
+    &__item {
+      width: 220px;
+      p {
+        margin-bottom: 5px;
+        line-height: 1rem;
+      }
+      p:nth-child(1) {
+        font-size: 1rem;
+      }
+      p:nth-child(3) {
+        margin-top: 8px;
+        font-family: "Nanum Gothic", sans-serif;
+        letter-spacing: -1px;
+      }
+    }
+    &__link {
+      font-size: 0.7rem;
+      a {
+        display: inline-block;
+        margin: 10px 7px 0 0;
+        border: 1px solid $skill;
+        padding: 5px;
+        &:hover {
+          background: $skill;
+          color: white;
         }
       }
     }
@@ -533,72 +474,70 @@ a:hover {
   // 메인
   .main {
     // 스킬
-    &__skills {
-      &--title {
+    .skills {
+      &__title {
         font-size: 1.5rem;
       }
-      &--container {
-        .skill-chart {
-          display: flex;
-          justify-content: center;
-          font-size: 0.8rem;
-          animation-duration: 1.5s;
-          .skill {
-            width: 50px;
-            height: 50px;
-            border: 1px solid $skill;
-            padding: 4px;
-            line-height: 51px;
-            p {
-              font-size: 0.7rem;
-            }
-          }
-          @include large-progress;
-          .skill-small {
-            display: none;
-          }
+      &__chart {
+        display: flex;
+        justify-content: center;
+        font-size: 0.8rem;
+        animation-duration: 1.5s;
+        @include large-progress;
+      }
+      &__item {
+        width: 50px;
+        height: 50px;
+        border: 1px solid $skill;
+        padding: 4px;
+        line-height: 51px;
+        p {
+          font-size: 0.7rem;
         }
-        .skill-code {
-          width: 468px;
-          background: $code;
-          margin: 60px auto 0;
-          text-align: left;
-          border-radius: 7px;
-          animation-delay: 0.8s;
-          animation-duration: 1s;
-          code {
+        &--small {
+          display: none;
+        }
+      }
+      &__code {
+        width: 468px;
+        background: $code;
+        margin: 60px auto 0;
+        text-align: left;
+        border-radius: 7px;
+        animation-delay: 0.8s;
+        animation-duration: 1s;
+        code {
+          display: inline-block;
+          padding: 7px 0;
+          font-weight: bold;
+          color: black;
+          span {
             display: inline-block;
-            padding: 7px 0;
-            font-weight: bold;
-            color: black;
-            span {
-              display: inline-block;
-              margin: 5px 0;
-              font-family: "Source Code Pro", monospace;
-            }
-            .func {
-              color: rgb(177, 39, 62);
-            }
-            .dec {
-              color: rgb(110, 169, 187);
-            }
-            .var {
-              color: rgb(218, 80, 17);
-            }
-            .str {
-              color: rgb(114, 60, 241);
-            }
-            .method {
-              color: rgb(46, 168, 46);
-            }
+            margin: 5px 0;
+            font-family: "Source Code Pro", monospace;
+          }
+          .func {
+            color: rgb(177, 39, 62);
+          }
+          .dec {
+            color: rgb(110, 169, 187);
+          }
+          .var {
+            color: rgb(218, 80, 17);
+          }
+          .str {
+            color: rgb(114, 60, 241);
+          }
+          .method {
+            color: rgb(46, 168, 46);
           }
         }
       }
     }
     // 프로젝트
     &__project {
-      .item-modal {
-        &-active {
+      .modal {
+        &--active {
           min-width: 500px;
         }
       }
@@ -641,13 +580,13 @@ a:hover {
         transform: translateY(-20px);
       }
     }
-    &__activity {
-      & > p:nth-child(1) {
+    .activity {
+      &__title {
         font-size: 0.8rem;
         background: white;
         left: calc(50% - 250px);
       }
-      &--container {
+      &__container {
         padding: 60px 0 170px;
         display: flex;
         justify-content: center;
@@ -655,10 +594,10 @@ a:hover {
           width: 200px;
           height: 130px;
         }
-        .siotz {
-          font-size: 0.85rem;
-          text-align: left;
-        }
+      }
+      &__item {
+        font-size: 0.85rem;
+        text-align: left;
       }
     }
   }
@@ -677,8 +616,8 @@ a:hover {
 // 작은 데스크탑 (1100px ~ 851px)
 @include respond-to("large") {
   .main {
-    &__project {
-      .project-list {
+    .project {
+      &__list {
         left: calc(50% - 395px);
         width: 130px;
       }
@@ -691,12 +630,33 @@ a:hover {
   .main {
     &__project {
       padding: 80px 0;
-      &--container {
+    }
+    .project {
+      &__container {
         display: block;
         height: inherit;
         text-align: center;
+        .modal-open {
+          position: static;
+          text-align: center;
+          display: inline-block;
+          margin: 10px;
+          border: 1px solid white;
+        }
+        .modal {
+          text-align: left;
+          &__container {
+            margin: 20px;
+          }
+          &__close {
+            top: -35px;
+            right: -6px;
+            width: 30px;
+            height: 30px;
+          }
+        }
       }
-      .project-list {
+      &__list {
         position: static;
         width: 100%;
         text-align: center;
@@ -706,44 +666,25 @@ a:hover {
           border-radius: 3px;
         }
       }
-      .project-item {
+      &__item {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-top: 35px;
-        .item-link {
-          margin-bottom: 25px;
-        }
-        .item-figure {
-          display: block;
-          .used {
-            position: static;
-            width: 500px;
-            margin: 50px 5px 0;
-            text-align: left;
-            p {
-              display: inline-block;
-            }
-          }
-        }
       }
-      .modal-open {
-        position: static;
-        text-align: center;
-        display: inline-block;
-        margin: 10px;
-        border: 1px solid white;
+      &__link {
+        margin-bottom: 25px;
       }
-      .item-modal {
-        text-align: left;
-        &-container {
-          margin: 20px;
-          img {
-            top: -35px;
-            right: -6px;
-            width: 30px;
-            height: 30px;
+      &__figure {
+        display: block;
+        .used {
+          position: static;
+          width: 500px;
+          margin: 50px 5px 0;
+          text-align: left;
+          p {
+            display: inline-block;
           }
         }
       }
@@ -756,52 +697,50 @@ a:hover {
 @include respond-to("small") {
   // 헤더
   .header {
-    &__title {
-      &--name {
-        font-size: 2rem;
-        animation-duration: 1.5s;
-      }
-      &--intro {
-        font-size: 0.8rem;
-      }
+    &__name {
+      font-size: 2rem;
+      animation-duration: 1.5s;
+    }
+    &__intro {
+      font-size: 0.8rem;
     }
   }
   // 메인
   .main {
     //스킬
-    &__skills {
-      &--title {
+    .skills {
+      &__title {
         font-size: 1.2rem;
       }
-      &--container {
+      &__container {
         margin-top: 40px;
-        .skill-chart {
-          font-size: 0.7rem;
-          .skill {
-            width: calc(50% - 80px);
-            min-width: 170px;
-            padding: 10px 0;
-            & p:nth-child(1) {
-              border: 1px solid $small;
-              display: inline-block;
-              width: 50px;
-              padding: 5px;
-              background: $small;
-              color: white;
-              margin: 15px 0;
-            }
-          }
-          #other {
-            display: none;
-          }
-          .skill-small {
-            font-family: "Nanum Gothic", sans-serif;
-            margin: 10px 0 0;
-          }
-        }
-        .skill-code {
+      }
+      &__chart {
+        font-size: 0.7rem;
+        #other {
           display: none;
         }
+      }
+      &__item {
+        width: calc(50% - 80px);
+        min-width: 170px;
+        padding: 10px 0;
+        & p:nth-child(1) {
+          border: 1px solid $small;
+          display: inline-block;
+          width: 50px;
+          padding: 5px;
+          background: $small;
+          color: white;
+          margin: 15px 0;
+        }
+        &--small {
+          font-family: "Nanum Gothic", sans-serif;
+          margin: 10px 0 0;
+        }
+      }
+      &__code {
+        display: none;
       }
     }
     // 프로젝트
@@ -823,54 +762,12 @@ a:hover {
           border-radius: 0px;
         }
       }
-      &--container {
+    }
+    .project {
+      &__container {
         text-align: center;
         display: block;
         position: static;
-        .project-list {
-          display: flex;
-          justify-content: center;
-          position: static;
-          p {
-            padding: 7px 5px;
-            border-radius: 0px;
-            &:hover {
-              border-radius: 0px;
-            }
-            &.active {
-              border-radius: 0px;
-            }
-          }
-        }
-        .project-item {
-          margin: 40px 6px 6px;
-          .item-link {
-            width: 100%;
-            margin-bottom: 30px;
-            a {
-              padding: 3px 6px;
-              border-radius: 0px;
-            }
-          }
-          .item-figure {
-            width: 100%;
-            .carousel {
-              width: 100%;
-              margin: 0 auto;
-            }
-            .used {
-              text-align: center;
-              position: static;
-              margin-top: 35px;
-              width: 100%;
-              font-size: 0.7rem;
-              p {
-                display: inline-block;
-                margin: 5px 2px;
-              }
-            }
-          }
-        }
         .modal-open {
           position: static;
           display: inline-block;
@@ -878,25 +775,69 @@ a:hover {
           margin: 40px 0 80px;
           border-radius: 0px;
         }
-        .item-modal {
-          &-container {
+        .modal {
+          &__container {
             padding: 20px;
             margin: 20px;
             text-align: left;
             min-width: 220px;
-            .item-about {
-              ol {
-                li {
-                  margin-left: 40px;
-                }
-              }
-            }
-            img {
-              top: -35px;
-              left: calc(50% - 13px);
-              width: 25px;
-              height: 25px;
-            }
+          }
+          &__close {
+            top: -35px;
+            left: calc(50% - 13px);
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+      &__list {
+        display: flex;
+        justify-content: center;
+        position: static;
+        p {
+          padding: 7px 5px;
+          border-radius: 0px;
+          &:hover {
+            border-radius: 0px;
+          }
+          &.active {
+            border-radius: 0px;
+          }
+        }
+      }
+      &__item {
+        margin: 40px 6px 6px;
+      }
+      &__link {
+        width: 100%;
+        margin-bottom: 30px;
+        a {
+          padding: 3px 6px;
+          border-radius: 0px;
+        }
+      }
+      &__figure {
+        width: 100%;
+        .carousel {
+          width: 100%;
+          margin: 0 auto;
+        }
+        .used {
+          text-align: center;
+          position: static;
+          margin-top: 35px;
+          width: 100%;
+          font-size: 0.7rem;
+          p {
+            display: inline-block;
+            margin: 5px 2px;
+          }
+        }
+      }
+      &__about {
+        ol {
+          li {
+            margin-left: 40px;
           }
         }
       }
@@ -924,21 +865,23 @@ a:hover {
     // activity
     &__activity {
       font-size: 0.7rem;
-      & > p:nth-child(1) {
+    }
+    .activity {
+      &__title {
         margin-top: 20px;
       }
-      &--container {
+      &__container {
         padding: 40px 0;
         img {
           width: 250px;
           height: 170px;
         }
-        .siotz {
-          font-size: 0.8rem;
-          margin: 30px auto;
-          &-link {
-            margin: 20px;
-          }
+      }
+      &__item {
+        font-size: 0.8rem;
+        margin: 30px auto;
+        &-link {
+          margin: 20px;
         }
       }
     }

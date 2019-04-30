@@ -23,8 +23,8 @@
     <div class="body-container">
       <header class="header">
         <div class="header__title">
-          <p class="header__title--name animated fadeInDown">SENA</p>
-          <div class="header__title--intro animated fadeIn">
+          <p class="header__name animated fadeInDown">SENA</p>
+          <div class="header__intro animated fadeIn">
             <p>
               The front-end developer
             </p>
@@ -48,59 +48,59 @@
         <span class="menu__about">ABOUT</span>
       </nav>
       <main class="main">
-        <section id="skills" class="main__skills">
+        <section id="skills" class="main__skills skills">
           <img src="./images/skill.svg" alt="스킬 아이콘" />
-          <div class="main__skills--title">
+          <div class="skills__title">
             Love learning, learn fast
             <p>2018.09 ~ ing</p>
           </div>
-          <div class="main__skills--container">
-            <div class="skill-chart animated">
-              <div id="html" class="skill">
+          <div class="skills__container">
+            <div class="skills__chart animated">
+              <div id="html" class="skills__item">
                 <p>HTML</p>
-                <p class="skill-small">- 시맨틱 마크업에 대한 이해</p>
-                <p class="skill-small">- meta 태그 기반의 SEO</p>
-                <p class="skill-small">- 웹접근성 고려</p>
+                <p class="skills__item--small">- 시맨틱 마크업에 대한 이해</p>
+                <p class="skills__item--small">- meta 태그 기반의 SEO</p>
+                <p class="skills__item--small">- 웹접근성 고려</p>
                 <div class="pie" data-value="90"></div>
               </div>
-              <div id="css" class="skill">
+              <div id="css" class="skills__item">
                 <p>CSS</p>
-                <p class="skill-small">- 반응형 웹 구현</p>
-                <p class="skill-small">- flex, grid에 대한 이해</p>
-                <p class="skill-small">- 크로스 브라우징</p>
+                <p class="skills__item--small">- 반응형 웹 구현</p>
+                <p class="skills__item--small">- flex, grid에 대한 이해</p>
+                <p class="skills__item--small">- 크로스 브라우징</p>
                 <div class="pie" data-value="80"></div>
               </div>
-              <div id="js" class="skill">
+              <div id="js" class="skills__item">
                 <p>JS</p>
-                <p class="skill-small">- ES6+ 문법 사용</p>
-                <p class="skill-small">- DOM 요소 제어</p>
-                <p class="skill-small">- ajax 통신</p>
+                <p class="skills__item--small">- ES6+ 문법 사용</p>
+                <p class="skills__item--small">- DOM 요소 제어</p>
+                <p class="skills__item--small">- ajax 통신</p>
                 <div class="pie" data-value="75"></div>
               </div>
-              <div id="react" class="skill">
+              <div id="react" class="skills__item">
                 <p>REACT</p>
-                <p class="skill-small">- 라이프사이클 이해</p>
-                <p class="skill-small">- context API, HOC의 활용</p>
-                <p class="skill-small">- 역할에 맞게 컴포넌트 설계</p>
+                <p class="skills__item--small">- 라이프사이클 이해</p>
+                <p class="skills__item--small">- context API, HOC의 활용</p>
+                <p class="skills__item--small">- 역할에 맞게 컴포넌트 설계</p>
                 <div class="pie" data-value="75"></div>
               </div>
-              <div id="redux" class="skill">
+              <div id="redux" class="skills__item">
                 <p>REDUX</p>
-                <p class="skill-small">- 기본 상태 관리</p>
-                <p class="skill-small">- 미들웨어 활용을 위한 공부 중</p>
+                <p class="skills__item--small">- 기본 상태 관리</p>
+                <p class="skills__item--small">- 미들웨어 활용을 위한 공부 중</p>
                 <div class="pie" data-value="50"></div>
               </div>
-              <div id="sass" class="skill">
+              <div id="sass" class="skills__item">
                   <p>SASS</p>
-                  <p class="skill-small">- mixin을 활용한 코드 축소화</p>
-                  <p class="skill-small">- css방법론의 확장</p>  
+                  <p class="skills__item--small">- mixin을 활용한 코드 축소화</p>
+                  <p class="skills__item--small">- css방법론의 확장</p>  
                   <div class="pie" data-value="40"></div>
                 </div>
-              <div id="other" class="skill">
+              <div id="other" class="skills__item">
                 <p>OTHER</p>
               </div>
             </div>
-            <div class="skill-code animated">
+            <div class="skills__code animated">
               <pre>
             <code class="language-javascript">
 <span>(</span><span class="func">function</span><span>(){</span>
@@ -116,15 +116,15 @@
             </div>
           </div>
         </section>
-        <section id="project" class="main__project">
-          <div class="main__project--container">
-            <div class="project-list">
+        <section id="project" class="main__project project">
+          <div class="project__container">
+            <div class="project__list">
               <p class="list-cgv">MOVIE&nbsp;SITE</p>
               <p class="list-brickid">BRICKID</p>
               <p class="list-omok">OMOK</p>
             </div>
             <template id="project-cgv">
-                <div class="item-link">
+                <div class="project__link">
                   <a
                     href="https://cgv.netlify.com/"
                     target="_blank"
@@ -144,7 +144,7 @@
                     >Demo Video</a
                   >
                 </div>
-                <div class="item-figure">
+                <div class="project__figure">
                   <div
                     id="carouselExampleIndicators"
                     class="carousel slide"
@@ -301,7 +301,7 @@
                 </div>
               </template>
               <template id="project-brickid">
-                  <div class="item-link">
+                  <div class="project__link">
                       <a
                         href="https://brickid.netlify.com/"
                         target="_blank"
@@ -315,7 +315,7 @@
                         >Github</a
                       >
                     </div>
-                    <div class="item-figure">
+                    <div class="project__figure">
                       <div
                         id="carouselExampleIndicators"
                         class="carousel slide"
@@ -449,7 +449,7 @@
                     </div>
                   </template>
               <template id="project-omok">
-                  <div class="item-link">
+                  <div class="project__link">
                       <a
                         href="https://team-guobaorou-sena.netlify.com/"
                         target="_blank"
@@ -463,7 +463,7 @@
                         >Github</a
                       >
                     </div>
-                    <div class="item-figure">
+                    <div class="project__figure">
                       <div
                         id="carouselExampleIndicators"
                         class="carousel slide"
@@ -567,18 +567,17 @@
                         <p>#&nbsp;github</p>
                       </div>
                     </div>              </template>
-            <div class="project-item"></div>
+            <div class="project__item"></div>
             <p class="modal-open">For the detail</p>
-            <div class="item-modal">
-                <div class="item-modal-container">
-                  <div class="modal-content"></div>
-                  <template id="modal-cgv">
-                    <p class="item-date">18.12.03 ~ 18.12.21 (3weeks)</p>
-                    <ul class="item-about">
-                      <li>CGV 사이트를 모델로 구현한 영화 예매 사이트</li>
-                      <li>TEAM - 프론트엔드 2명, 백엔드 2명</li>
-                      <li>프론트엔드 기여도 - 50%</li>
-                      <ol>
+            <div class="project__modal modal">
+              <div class="modal__container">
+                <div class="modal__content"></div>
+                <template id="modal-cgv">
+                  <p class="project__date">18.12.03 ~ 18.12.21 (3weeks)</p>
+                  <ul class="project__about">
+                    <li>CGV 사이트를 모델로 구현한 영화 예매 사이트</li>
+                    <li>TEAM - 프론트엔드 2명, 백엔드 2명</li>
+                    <li>프론트엔드 기여도 - 50%</li>                      <ol>
                         Responsible for
                         <li>메인 페이지의 영화 차트 섹션</li>
                         <li>영화 차트 페이지</li>
@@ -592,8 +591,8 @@
                     </ul>
                   </template>
                   <template id="modal-brickid">
-                    <p class="item-date">18.11.7 ~ 18.11.9 (3days)</p>
-                    <ul class="item-about">
+                    <p class="project__date">18.11.7 ~ 18.11.9 (3days)</p>
+                    <ul class="project__about">
                       <li>쇼핑몰 사이트</li>
                       <li>Personal project</li>
                       <li>기여도 - 100%</li>
@@ -606,8 +605,8 @@
                     </ul>
                   </template>
                   <template id="modal-omok">
-                    <p class="item-date">18.10.25 ~ 18.10.26 (2days)</p>
-                    <ul class="item-about">
+                    <p class="project__date">18.10.25 ~ 18.10.26 (2days)</p>
+                    <ul class="project__about">
                       <li>오목 게임 플레이 사이트</li>
                       <li>TEAM - 프론트엔드 3명</li>
                       <li>기여도 - 33%</li>
@@ -620,19 +619,19 @@
                       </ol>
                     </ul>
                   </template>
-                    <img
-                      class="item-modal-close"
-                      src="./images/close.svg"
-                      alt="닫기 버튼"
-                    />
-                  </div>
-                </div>
+                <img
+                  class="modal__close"
+                  src="./images/close.svg"
+                  alt="닫기 버튼"
+                />
+              </div>
+            </div>
           </div>
         </section>
-        <section id="about" class="main__about">
+        <section id="about" class="main__about about">
           <img src="./images/about.svg" alt="어바웃 아이콘" />
-          <p class="main__about--title">SERENDIPIA</p>
-          <div class="about-link">
+          <p class="about__title">SERENDIPIA</p>
+          <div class="about__link">
             <a
             href="https://github.com/sena-a"
             target="_blank"
@@ -649,31 +648,28 @@
           <p>Hi, My name is SENA AHN</p>
           <p>you can drag graph elements to move</p>
         </section>
-        <div class="main__activity">
-            <p>Activity</p>
-            <div class="main__activity--container">
-              <img src="https://res.cloudinary.com/dnj3azhtb/image/upload/v1553765747/senafolio/siots.jpg" alt="스터디 사진">
-              <div class="siotz">
-                <p>SIOTZ</p>
-                <p>19.01.10 ~ ing</p>
-                <p>프론트엔드 개발자로 성장하고 있는 4명의 스터디 그룹으로, 궁금한 것은 무엇이든 배우는 시옷즈 스터디입니다.</p>
-                <div class="siotz-link">
-                    <a
-                    href="https://gitlab.com/siots-study/topics/wikis/home"
-                    target="_blank"
-                    title="스터디 깃랩 보기"
-                    >Study GitLab</a
-                    >
-                    <a
-                    href="https://trello.com/b/OA0kDwHH/siotz-study"
-                    target="_blank"
-                    title="스터디 트렐로 보기"
-                    >Trello</a
-                    >
-                  </div>
-              </div>
+        <section class="main__activity activity">
+          <p class="activity__title">Activity</p>
+          <div class="activity__container">
+            <img src="https://res.cloudinary.com/dnj3azhtb/image/upload/v1553765747/senafolio/siots.jpg" alt="스터디 사진">
+            <div class="activity__item">
+              <p>SIOTZ</p>
+              <p>19.01.10 ~ ing</p>
+              <p>프론트엔드 개발자로 성장하고 있는 4명의 스터디 그룹으로, 궁금한 것은 무엇이든 배우는 시옷즈 스터디입니다.</p>
+              <div class="activity__link">
+                <a
+                  href="https://gitlab.com/siots-study/topics/wikis/home"
+                  target="_blank"
+                  title="스터디 깃랩 보기"
+                >Study GitLab</a>
+                <a
+                  href="https://trello.com/b/OA0kDwHH/siotz-study"
+                  target="_blank"
+                  title="스터디 트렐로 보기"
+                >Trello</a>
             </div>
-        </div>
+          </div>
+        </section>
       </main>
       <aside class="top">
         <img src="./images/top.svg" alt="위로">

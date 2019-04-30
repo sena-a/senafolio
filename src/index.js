@@ -1,4 +1,7 @@
-console.log("%cmake the world a better place!", "color:#9a9fd9; font-size:large");
+console.log(
+  "%cmake the world a better place!",
+  "color:#9a9fd9; font-size:large"
+);
 console.log(
   "%c       ",
   "font-size: 160px; background:url(https://res.cloudinary.com/dnj3azhtb/image/upload/c_scale,q_auto:eco,w_180/v1554720108/senafolio/senafolio-console.jpg) no-repeat;"
@@ -47,8 +50,8 @@ const templates = {
   modalOmok: document.getElementById("modal-omok").content
 };
 
-const projectEl = document.querySelector(".project-item");
-const modalEl = document.querySelector(".modal-content");
+const projectEl = document.querySelector(".project__item");
+const modalEl = document.querySelector(".modal__content");
 
 // projectEl에 프로젝트 아이템 삽입 함수
 function drawProject(frag, project) {
@@ -66,14 +69,12 @@ function drawModal(frag) {
 const cgvButton = document.querySelector(".list-cgv");
 
 cgvButton.addEventListener("click", () => {
-  const cl = document.querySelector(".main__project--container").classList;
+  const cl = document.querySelector(".project__container").classList;
   const now = cl[1];
 
   if (now !== "cgv") {
-    document
-      .querySelector(".main__project--container")
-      .classList.remove(`${now}`);
-    document.querySelector(".main__project--container").classList.add("cgv");
+    document.querySelector(".project__container").classList.remove(`${now}`);
+    document.querySelector(".project__container").classList.add("cgv");
 
     const frag = document.importNode(templates.cgv, true);
     const modalFrag = document.importNode(templates.modalCgv, true);
@@ -86,16 +87,12 @@ cgvButton.addEventListener("click", () => {
 const brickidButton = document.querySelector(".list-brickid");
 
 brickidButton.addEventListener("click", () => {
-  const cl = document.querySelector(".main__project--container").classList;
+  const cl = document.querySelector(".project__container").classList;
   const now = cl[1];
 
   if (now !== "brickid") {
-    document
-      .querySelector(".main__project--container")
-      .classList.remove(`${now}`);
-    document
-      .querySelector(".main__project--container")
-      .classList.add("brickid");
+    document.querySelector(".project__container").classList.remove(`${now}`);
+    document.querySelector(".project__container").classList.add("brickid");
 
     const frag = document.importNode(templates.brickid, true);
     const modalFrag = document.importNode(templates.modalBrickid, true);
@@ -109,14 +106,12 @@ brickidButton.addEventListener("click", () => {
 const omokButton = document.querySelector(".list-omok");
 
 omokButton.addEventListener("click", () => {
-  const cl = document.querySelector(".main__project--container").classList;
+  const cl = document.querySelector(".project__container").classList;
   const now = cl[1];
 
   if (now !== "omok") {
-    document
-      .querySelector(".main__project--container")
-      .classList.remove(`${now}`);
-    document.querySelector(".main__project--container").classList.add("omok");
+    document.querySelector(".project__container").classList.remove(`${now}`);
+    document.querySelector(".project__container").classList.add("omok");
 
     const frag = document.importNode(templates.omok, true);
     const modalFrag = document.importNode(templates.modalOmok, true);
@@ -129,19 +124,19 @@ omokButton.addEventListener("click", () => {
 // 모달 열기 버튼
 const open = document.querySelector(".modal-open");
 open.addEventListener("click", () => {
-  document.querySelector(".item-modal").classList.add("item-modal-active");
+  document.querySelector(".modal").classList.add("modal--active");
 });
 
 // 모달 닫기 버튼
-const close = document.querySelector(".item-modal-close");
+const close = document.querySelector(".modal__close");
 
 close.addEventListener("click", () => {
-  document.querySelector(".item-modal").classList.remove("item-modal-active");
+  document.querySelector(".modal").classList.remove("modal--active");
 });
 
 // 기본 project로 move-site 넣어주기
 (function() {
-  document.querySelector(".main__project--container").classList.add("cgv");
+  document.querySelector(".project__container").classList.add("cgv");
 
   const frag = document.importNode(templates.cgv, true);
   const modalFrag = document.importNode(templates.modalCgv, true);
@@ -153,10 +148,10 @@ close.addEventListener("click", () => {
 // 화면 노출 시 애니메이션 삽입
 document.addEventListener("scroll", () => {
   const scroll = window.scrollY;
-  const headerTitle = document.querySelector(".header__title--name");
-  const headerIntro = document.querySelector(".header__title--intro");
-  const skillChart = document.querySelector(".skill-chart");
-  const skillCode = document.querySelector(".skill-code");
+  const headerTitle = document.querySelector(".header__name");
+  const headerIntro = document.querySelector(".header__intro");
+  const skillChart = document.querySelector(".skills__chart");
+  const skillCode = document.querySelector(".skills__code");
   if (scroll < 250) {
     headerTitle.classList.add("fadeInDown");
     headerIntro.classList.add("fadeIn");
