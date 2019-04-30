@@ -213,14 +213,14 @@ a:hover {
           padding: 40px;
           border: 2px solid white;
           position: relative;
-          img {
-            position: absolute;
-            top: -4px;
-            right: -40px;
-            width: 35px;
-            height: 35px;
-            cursor: pointer;
-          }
+        }
+        &__close {
+          position: absolute;
+          top: -4px;
+          right: -40px;
+          width: 35px;
+          height: 35px;
+          cursor: pointer;
         }
       }
     }
