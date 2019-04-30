@@ -23,7 +23,7 @@ a:hover {
   text-decoration: none;
 }
 
-// // 데스크탑
+// 데스크탑 버전
 
 // 헤더
 .header {
@@ -96,7 +96,7 @@ a:hover {
 // 메인
 .main {
   color: $skill;
-  // 스킬
+  // 스킬 섹션
   &__skills {
     font-size: 0.8rem;
     text-align: center;
@@ -120,7 +120,7 @@ a:hover {
       text-align: center;
     }
   }
-  //프로젝트
+  // 프로젝트 섹션
   &__project {
     width: 100%;
     font-size: 0.8rem;
@@ -361,7 +361,7 @@ a:hover {
     }
   }
 
-  // about
+  // 어바웃 섹션
   &__about {
     text-align: center;
     padding: 90px 0 20px;
@@ -370,15 +370,20 @@ a:hover {
       width: 15px;
       height: 15px;
     }
-    &--title {
-      margin: 30px 0 0;
-    }
     p:nth-child(4) {
       display: inline-block;
       padding: 7px 11px;
       border: 1px solid $skill;
     }
-    .about-link {
+    text {
+      transform: translateY(7px);
+    }
+  }
+  .about {
+    &__title {
+      margin: 30px 0 0;
+    }
+    &__link {
       text-align: center;
       font-size: 0.7rem;
       margin: 15px 0;
@@ -403,10 +408,8 @@ a:hover {
         }
       }
     }
-    text {
-      transform: translateY(7px);
-    }
   }
+  // 액티비티 섹션
   &__activity {
     text-align: center;
   }
@@ -454,7 +457,7 @@ a:hover {
     }
   }
 }
-
+// 탑 아이콘
 .top {
   cursor: pointer;
   img {
@@ -462,6 +465,8 @@ a:hover {
     height: 30px;
   }
 }
+
+// 푸터
 .footer {
   text-align: center;
   font-size: 0.7rem;
@@ -469,11 +474,12 @@ a:hover {
   color: black;
 }
 
-// 기본 데스크탑
+// 551px까지의 기본 css
+
 @include respond-to("basic") {
   // 메인
   .main {
-    // 스킬
+    // 스킬 섹션
     .skills {
       &__title {
         font-size: 1.5rem;
@@ -534,7 +540,7 @@ a:hover {
         }
       }
     }
-    // 프로젝트
+    // 프로젝트 섹션
     &__project {
       .modal {
         &--active {
@@ -542,10 +548,8 @@ a:hover {
         }
       }
     }
+    // 어바웃 섹션
     &__about {
-      &--title {
-        font-size: 1.3rem;
-      }
       p:nth-child(4) {
         font-size: 0.8rem;
         background: white;
@@ -556,7 +560,18 @@ a:hover {
         font-size: 0.7rem;
         margin-top: 50px;
       }
-      .about-link {
+      .svg-container {
+        width: 550px;
+        height: 440px;
+        margin: 0 auto;
+        transform: translateY(-20px);
+      }
+    }
+    .about {
+      &__title {
+        font-size: 1.3rem;
+      }
+      &__link {
         a {
           padding: 6px 8px 9px;
           &:hover {
@@ -573,13 +588,8 @@ a:hover {
           }
         }
       }
-      .svg-container {
-        width: 550px;
-        height: 440px;
-        margin: 0 auto;
-        transform: translateY(-20px);
-      }
     }
+    // 액티비티 섹션
     .activity {
       &__title {
         font-size: 0.8rem;
@@ -707,7 +717,7 @@ a:hover {
   }
   // 메인
   .main {
-    //스킬
+    // 스킬 섹션
     .skills {
       &__title {
         font-size: 1.2rem;
@@ -743,7 +753,7 @@ a:hover {
         display: none;
       }
     }
-    // 프로젝트
+    // 프로젝트 섹션
     &__project {
       font-size: 0.7rem;
       padding: 90px 0 0;
@@ -842,17 +852,9 @@ a:hover {
         }
       }
     }
-    // about
+    // 어바웃 섹션
     &__about {
       font-size: 0.7rem;
-      &--title {
-        font-size: 1.1rem;
-      }
-      .about-link {
-        a {
-          padding: 3px 4px 6px;
-        }
-      }
       p:nth-child(4) {
         display: inline-block;
         margin-top: 30px;
@@ -862,7 +864,17 @@ a:hover {
         display: none;
       }
     }
-    // activity
+    .about {
+      &__title {
+        font-size: 1.1rem;
+      }
+      &__link {
+        a {
+          padding: 3px 4px 6px;
+        }
+      }
+    }
+    // 액티비티 섹션
     &__activity {
       font-size: 0.7rem;
     }
@@ -886,6 +898,7 @@ a:hover {
       }
     }
   }
+  // 탑 아이콘
   .top {
     position: fixed;
     bottom: 0;
