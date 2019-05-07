@@ -195,7 +195,7 @@ var nodes = [
   { name: "밀크티", target: [0, 3, 4], value: 42 },
   { name: "책", target: [0, 1, 2], value: 38 },
   { name: "성장", target: [0, 3], value: 54 },
-  { name: "", target: [0, 3, 4, 5], value: 47 }
+  { name: "고양이", target: [0, 3, 4, 5], value: 47 }
 ];
 
 var links = [];
